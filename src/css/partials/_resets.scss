@@ -1,0 +1,75 @@
+/*
+Reset styles are based on the modern reset by Andy Bell.
+https://andy-bell.co.uk/a-modern-css-reset/
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* 
+The below code enables smooth scroll for everything except "find on page"
+It must have two separate keyframes even though they are the same due to
+a browser bug.
+@see https://schepp.dev/posts/smooth-scrolling-and-page-search/
+*/
+@keyframes smoothScroll1 {
+	from,
+	to {
+		scroll-behavior: smooth;
+	}
+}
+
+@keyframes smoothScroll2 {
+	from,
+	to {
+		scroll-behavior: smooth;
+	}
+}
+
+html {
+	animation: smoothScroll1 1s;
+}
+
+html:focus-within {
+	animation-name: smoothScroll2;
+	scroll-behavior: smooth;
+}
+
+/* end smooth scroll hack */
+
+body {
+	max-width: 100vw;
+	min-height: 100vh;
+	text-rendering: optimizespeed;
+}
+
+img,
+picture {
+	display: block;
+	max-width: 100%;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	html:focus-within {
+		scroll-behavior: auto !important;
+	}
+}
