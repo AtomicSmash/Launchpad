@@ -1,0 +1,24 @@
+/**
+ * This file contains any styling which affects the editor controls and should only be shown on the editor side.
+ */
+
+// Cookie reset switch for global banners
+/* stylelint-disable-next-line selector-class-pattern -- Class name from ACF, no control over it */
+.acf-field_66e9271868380 .acf-switch.-on {
+	background-color: #f00;
+	border-color: #f00;
+
+	.acf-switch-slider,
+	&:hover {
+		border-color: #f00;
+	}
+
+	.acf-switch-on {
+		text-shadow: none;
+	}
+}
+
+.block-editor-format-toolbar__typography-popover .components-popover__content {
+	padding: 1rem;
+	width: auto;
+}

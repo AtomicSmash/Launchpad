@@ -1,0 +1,46 @@
+{
+    "key": "group_66e92717db4ef",
+    "title": "Global banner cookie reset",
+    "fields": [
+        {
+            "key": "field_66e9271868380",
+            "label": "Cookie reset",
+            "name": "cookie_reset",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "This checkbox will reset the cookie and make this banner show for everyone. Only select this if you're sure you want everyone to see this banner again.\r\n<br\/><br\/>\r\nOnce you've updated the post, be sure to refresh the page before you continue editing.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 0,
+            "ui_on_text": "RESET",
+            "ui_off_text": "No",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "global-banner"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1726840654
+}

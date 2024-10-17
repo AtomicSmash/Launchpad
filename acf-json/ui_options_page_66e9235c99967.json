@@ -1,0 +1,23 @@
+{
+    "key": "ui_options_page_66e9235c99967",
+    "title": "Global banner",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Global banner",
+    "menu_slug": "global-banner",
+    "parent_slug": "themes.php",
+    "advanced_configuration": 1,
+    "icon_url": "",
+    "menu_title": "",
+    "position": "",
+    "redirect": false,
+    "description": "",
+    "menu_icon": [],
+    "update_button": "Update",
+    "updated_message": "Options Updated",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": 0,
+    "modified": 1726555619
+}

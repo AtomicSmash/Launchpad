@@ -1,0 +1,7 @@
+{
+	"name": "@atomicsmash/launchpad",
+	"type": "module",
+	"private": true,
+	"description": "Add dependencies to be distributed with the theme here.",
+	"version": "1.0.0-beta.4"
+}

@@ -1,5 +1,13 @@
 {
 	"name": "atomicsmash/launchpad",
 	"description": "A theme for WordPress made by Atomic Smash.",
-	"type": "wordpress-theme"
+	"type": "wordpress-theme",
+	"autoload": {
+		"psr-4": {
+			"Launchpad\\": "classes/"
+		}
+	},
+	"require": {
+		"johnbillion/extended-cpts": "*"
+	}
 }

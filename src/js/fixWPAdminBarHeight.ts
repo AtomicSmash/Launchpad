@@ -1,4 +1,4 @@
-import { domReady } from "./utils";
+import domReady from "@wordpress/dom-ready";
 
 export class FixWPAdminBarHeight {
 	wpBarIsGone = false;

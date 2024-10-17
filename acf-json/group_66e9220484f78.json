@@ -1,0 +1,54 @@
+{
+    "key": "group_66e9220484f78",
+    "title": "Global banner page",
+    "fields": [
+        {
+            "key": "field_66e92204eb255",
+            "label": "Banner",
+            "name": "selected_global_banners",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "Please select all the banners you want to show. You can select multiple banners at the same time, and if you do, the order of selection is the order they are shown. If this is left blank, then no banners will show.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "global-banner"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "return_format": "object",
+            "multiple": 1,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "global-banner"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1726555608
+}
