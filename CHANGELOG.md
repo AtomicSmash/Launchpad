@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.5
+
+### Patch Changes
+
+- 3c7de8e: Optimise dependencies in releases
+
 ## 1.0.0-beta.4
 
 ### Patch Changes
