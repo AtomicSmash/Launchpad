@@ -1,5 +1,16 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.6
+
+### Major Changes
+
+- 011fe74: Remove part-card and part-testimonial patterns
+
+### Patch Changes
+
+- 011fe74: Add launchpad category to post card pattern
+- 011fe74: Add the ability for the child theme to read parent theme ACF fields
+
 ## 1.0.0-beta.5
 
 ### Patch Changes

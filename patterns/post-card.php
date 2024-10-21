@@ -2,6 +2,7 @@
 /**
  * Title: Post Card
  * Slug: launchpad/post-card
+ * Categories: launchpad
  * Inserter: yes
  */
 
