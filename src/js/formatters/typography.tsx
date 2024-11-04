@@ -89,15 +89,32 @@ function Edit({
 				title="Typography"
 				onClick={() => {
 					setFontFamily(
-						value.activeFormats[0]?.attributes?.class
+						(
+							value.activeFormats[0] as
+								| {
+										attributes: Partial<{
+											class: string;
+											style: string;
+										}>;
+								  }
+								| undefined
+						)?.attributes?.class
 							?.replace("has-", "")
 							.replace("-font-family", "") ?? "",
 					);
 					setFontWeight(
-						(value.activeFormats[0]?.attributes?.style?.replace(
-							"font-weight:",
-							"",
-						) as (typeof FONT_WEIGHTS)[number]["value"] | undefined) ?? "",
+						((
+							value.activeFormats[0] as
+								| {
+										attributes: Partial<{
+											class: string;
+											style: string;
+										}>;
+								  }
+								| undefined
+						)?.attributes?.style?.replace("font-weight:", "") as
+							| (typeof FONT_WEIGHTS)[number]["value"]
+							| undefined) ?? "",
 					);
 					setIsPopoverVisible(!isPopoverVisible);
 				}}
@@ -163,9 +180,7 @@ function Edit({
 									);
 									return;
 								}
-								setFontWeight(
-									newFontWeight as (typeof FONT_WEIGHTS)[number]["value"] | "",
-								);
+								setFontWeight(newFontWeight);
 							}}
 						/>
 						<Button variant="primary" type="submit" text={__("Apply")} />

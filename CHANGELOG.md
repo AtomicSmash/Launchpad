@@ -1,5 +1,16 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.7
+
+### Major Changes
+
+- 7712165: Remove footer content
+- 33986bf: Add new default spacing sizes to theme.json
+
+### Patch Changes
+
+- 74c8644: Minor linting updates
+
 ## 1.0.0-beta.6
 
 ### Major Changes
