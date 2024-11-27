@@ -79,7 +79,7 @@ class Assets {
 	/**
 	 * Get cached asset
 	 *
-	 * Gets the filename of a cached asset from the manifest file. This function will search for an entry in the child theme manifest first, falling back to the manifest in the parent theme, and returning an error if it's not found in either.
+	 * Gets the file info of a cached asset from the manifest file. This function will search for an entry in the child theme manifest first, falling back to the manifest in the parent theme, and returning an error if it's not found in either.
 	 *
 	 * @param String $filename Name of the file in the manifest.
 	 * @param array  $args {
@@ -114,7 +114,7 @@ class Assets {
 	/**
 	 * Get cached asset from the parent theme.
 	 *
-	 * Gets the filename of a cached asset from the parent theme manifest file.
+	 * Gets the file info of a cached asset from the parent theme manifest file.
 	 *
 	 * @param String $filename Name of the file in the manifest.
 	 * @param array  $args {
@@ -143,6 +143,44 @@ class Assets {
 			'source' => $args['relative'] ? $this->theme_build_folder . $asset : get_parent_theme_file_uri( $this->theme_build_folder . $asset ),
 			'dependencies' => isset( $this->parent_theme_asset_info[ $filename ] ) ? $this->parent_theme_asset_info[ $filename ]['dependencies'] : array(),
 			'version' => isset( $this->parent_theme_asset_info[ $filename ] ) ? $this->parent_theme_asset_info[ $filename ]['version'] : null,
+		);
+	}
+
+	/**
+	 * Get cached asset from the child theme.
+	 *
+	 * Gets the file info of a cached asset from the child theme manifest file.
+	 *
+	 * @param String $filename Name of the file in the manifest.
+	 * @param array  $args {
+	 *     Optional. An array of arguments.
+	 *
+	 *     @type bool $query    Whether to include the query parameter in the returned value. Default false. Accepts true,false.
+	 *     @type bool $relative Whether to return the file in a theme folder relative format. Default false. Accepts true,false.
+	 * }
+	 * @return array A collection of info on the asset, including source, dependencies and version.
+	 */
+	public function get_cached_asset_from_child( string $filename, $args = array() ) {
+		if ( get_template_directory() === get_stylesheet_directory() ) {
+			return new WP_Error( 'not_a_child_theme', __( 'You can\'t use `get_cached_asset_from_child` from a parent theme.', 'launchpad' ) );
+		}
+		$default_args = array(
+			'query' => false,
+			'relative' => false,
+		);
+		$args = array_merge( $default_args, $args );
+		if ( empty( $this->child_theme_manifest[ $filename ] ) ) {
+			return new WP_Error( 'enqueued_file_missing', __( 'The cached asset you were looking for is not in the manifest. Ensure you have spelled it correctly.', 'launchpad' ) );
+		}
+		$asset = $this->child_theme_manifest[ $filename ];
+		if ( false === $args['query'] && str_contains( $asset, '?' ) ) {
+			// Remove query parameters.
+			$asset = explode( '?', $asset )[0];
+		}
+		return array(
+			'source' => $args['relative'] ? $this->theme_build_folder . $asset : get_theme_file_uri( $this->theme_build_folder . $asset ),
+			'dependencies' => isset( $this->child_theme_asset_info[ $filename ] ) ? $this->child_theme_asset_info[ $filename ]['dependencies'] : array(),
+			'version' => isset( $this->child_theme_asset_info[ $filename ] ) ? $this->child_theme_asset_info[ $filename ]['version'] : null,
 		);
 	}
 

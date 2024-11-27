@@ -1,5 +1,15 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.10
+
+### Major Changes
+
+- e5f3a09: Fix launchpad enqueues
+
+### Minor Changes
+
+- 47dc87e: Add get asset from child theme only method
+
 ## 1.0.0-beta.9
 
 ### Patch Changes
