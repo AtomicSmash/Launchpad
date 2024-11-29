@@ -107,6 +107,11 @@
 			"customSpacingSize": false,
 			"spacingSizes": [
 				{
+					"name": "0",
+					"size": "0rem",
+					"slug": "0"
+				},
+				{
 					"name": "1",
 					"size": "0.5rem",
 					"slug": "1"
@@ -192,7 +197,11 @@
 			"presets": []
 		}
 	},
-	"styles": {},
+	"styles": {
+		"spacing": {
+			"blockGap": "var(--wp--preset--spacing--2)"
+		}
+	},
 	"templateParts": [
 		{
 			"area": "header",

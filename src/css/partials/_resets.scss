@@ -50,7 +50,6 @@ html:focus-within {
 body {
 	--body-min-height: calc(100vh - var(--wp-admin--admin-bar--height, 0px));
 
-	background: var(--wp--preset--color--white);
 	box-shadow: 0 0 20px #eee;
 	margin: auto;
 
@@ -116,7 +115,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 // Restore changes from Wordpress 6.6 to 6.7
-.wp-block-query-pagination>.wp-block-query-pagination-next, .wp-block-query-pagination>.wp-block-query-pagination-numbers, .wp-block-query-pagination>.wp-block-query-pagination-previous {
-	margin-bottom: .5em;
-	margin-right: .5em;
+.wp-block-query-pagination > .wp-block-query-pagination-next,
+.wp-block-query-pagination > .wp-block-query-pagination-numbers,
+.wp-block-query-pagination > .wp-block-query-pagination-previous {
+	margin-bottom: 0.5em;
+	margin-right: 0.5em;
 }

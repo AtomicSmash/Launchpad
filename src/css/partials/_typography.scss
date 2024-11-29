@@ -1,3 +1,16 @@
+/* Prevent font size inflation */
+html {
+	text-size-adjust: none;
+}
+
+/* Prevent browsers from setting their own font sizes for our elements */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
 .has-heading-1-font-size {
 	line-height: var(--wp--custom--line-height--heading-1);
 }

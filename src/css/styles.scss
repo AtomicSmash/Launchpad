@@ -1,5 +1,11 @@
 @import "partials/resets";
 @import "partials/typography";
 
+// WP Core and 3rd party blocks
+// @import "partials/blocks/example";
+
+// Patterns
+@import "partials/patterns/launchpad-cta";
+
 // Accessibility must always be last so nothing overrides it.
 @import "partials/accessibility";

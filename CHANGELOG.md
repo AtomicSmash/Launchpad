@@ -1,5 +1,19 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.11
+
+### Patch Changes
+
+- de4aa26: Minor Launchpad fixes
+
+  1. Adds text based resets like inheriting font styles for elements
+  2. Add blog home template
+  3. Add default padding to CTA pattern
+  4. Update negative spacer meta data to fix the slug and name, and add a different spacer class to it so it can be styled differently.
+  5. Copy CSS styles for page spacer from Cloudcall and write styles for negative page spacer.
+  6. Set default block gap (space between blocks) to spacing var 2
+  7. Fix body background colour conflict with global styles
+
 ## 1.0.0-beta.10
 
 ### Major Changes
