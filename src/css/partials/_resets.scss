@@ -69,13 +69,18 @@ body {
 
 // Force footer to the bottom of the page.
 .wp-site-blocks {
-	display: flex;
+	display: flex !important;
 	flex-direction: column;
+	gap: var(--wp--preset--spacing--0);
 	min-height: var(--body-min-height);
 }
 
 .wp-site-blocks > main {
 	flex-grow: 1;
+}
+
+.wp-site-blocks > * {
+	margin-block-start: var(--wp--preset--spacing--0) !important;
 }
 
 img,

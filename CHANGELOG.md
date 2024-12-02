@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.13
+
+### Major Changes
+
+- 64934fd: Fix spacers and set wp-site-blocks blockgap to zero
+
 ## 1.0.0-beta.12
 
 ### Patch Changes

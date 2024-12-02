@@ -7,6 +7,6 @@
  */
 
 ?>
-<!-- wp:spacer {"height":"0","metadata":{"name":"Negative spacer"},"className":"negative-page-spacer","style":{"spacing":{"margin":{"top":"-4rem"}}}} -->
-<div style="margin-top:-4rem;height:0" aria-hidden="true" class="wp-block-spacer negative-page-spacer"></div>
+<!-- wp:spacer {"height":"0","metadata":{"name":"Negative spacer"},"className":"negative-page-spacer"} -->
+<div style="height:0" aria-hidden="true" class="wp-block-spacer negative-page-spacer"></div>
 <!-- /wp:spacer -->

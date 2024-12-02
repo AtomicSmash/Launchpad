@@ -17,3 +17,9 @@
 		margin-block-start: var(--wp--preset--spacing--0) !important;
 	}
 }
+
+.block-editor-block-preview__content-iframe .negative-page-spacer {
+	/* When previewing, give it height and colour so it can be selected */
+	height: 4rem !important;
+	background-color: var(--wp--preset--color--black);
+}
