@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.14
+
+### Patch Changes
+
+- 4c7fde8: Add WP Rocket compatibility
+
 ## 1.0.0-beta.13
 
 ### Major Changes
