@@ -1,0 +1,76 @@
+.site-header {
+	--header-y-padding: var(--wp--preset--spacing--4);
+
+	/* Set header padding */
+	padding-block: var(--header-y-padding);
+
+	/* X padding is handled within the template part automatically */
+	padding-inline: 0;
+
+	/* Make menu stick to the top when you scroll down */
+	position: sticky;
+	top: var(--wp-admin--admin-bar--height, 0);
+	background-color: var(--wp--preset--color--white);
+
+	.has-modal-open & {
+		top: 0;
+	}
+}
+
+.site-header .wp-block-site-logo {
+	/* Make logo show when mobile menu is open */
+	z-index: 100000;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open {
+	/* Match padding with header so open and close icons are in the same place */
+	padding-block: var(--header-y-padding);
+	padding-inline: var(--wp--style--root--padding-left)
+		var(--wp--style--root--padding-right);
+
+	/* Show wp admin bar when mobile menu is open */
+	z-index: 99999;
+}
+
+.wp-block-navigation-submenu__toggle:not([aria-expanded="true"])
+	~ .wp-block-navigation-submenu {
+	/* If the menu isn't open, hide the submenu */
+	display: none;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open
+	.wp-block-navigation__responsive-container-content {
+	/* Make the submenu-arrow show and fix placement in mobile menu */
+	.wp-block-navigation__submenu-icon {
+		display: inline-block;
+	}
+
+	.wp-block-navigation-item {
+		flex-flow: row wrap;
+	}
+
+	.wp-block-navigation-item__content {
+		padding-right: 0.85em;
+	}
+
+	.wp-block-navigation-submenu {
+		flex-basis: 100%;
+	}
+}
+
+.wp-block-navigation
+	.has-child
+	.wp-block-navigation__submenu-container
+	> .wp-block-navigation-item
+	> .wp-block-navigation-item__content {
+	/* Make the submenu-arrow show in the correct place for nested submenus */
+	flex-grow: 0;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open
+	.wp-block-navigation__responsive-container-content
+	.has-child
+	.wp-block-navigation__submenu-container {
+	/* Remove right padding so text can extend to the edge of the screen on mobile */
+	padding-right: 0;
+}

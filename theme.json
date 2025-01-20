@@ -170,11 +170,8 @@
 			"units": ["px", "em", "rem", "vh", "vw", "%"]
 		},
 		"custom": {
-			"site-container-x-padding": "clamp(0.75rem, calc(0.36rem + 1.95vw), 1.75rem)",
-			"site-header-y-padding": "clamp(1.25rem, 1.0549rem + 0.9756vw, 1.75rem)",
-			"site-footer-y-padding": "clamp(1.25rem, 1.0549rem + 0.9756vw, 1.75rem)",
-			"nav-item-gap": "clamp(0.75rem, calc(0.36rem + 1.95vw), 1.75rem)",
-			"contact-form-padding": "clamp(1.25rem, 0.762rem + 2.439vw, 2.5rem)",
+			"site-container-x-padding": "clamp(1rem, 1.818vw + 0.636rem, 2rem)",
+			"site-container-y-padding": "clamp(1rem, 1.818vw + 0.636rem, 2rem)",
 			"lineHeight": {
 				"heading-1": "clamp(3.088rem, 3.759vw + 2.242rem, 5.625rem)",
 				"heading-2": "clamp(2.275rem, 2.185vw + 1.783rem, 3.75rem)",
@@ -199,19 +196,30 @@
 	},
 	"styles": {
 		"spacing": {
-			"blockGap": "var(--wp--preset--spacing--2)"
+			"blockGap": "var(--wp--preset--spacing--2)",
+			"padding": {
+				"top": "var(--wp--custom--site-container-y-padding)",
+				"right": "var(--wp--custom--site-container-x-padding)",
+				"bottom": "var(--wp--custom--site-container-y-padding)",
+				"left": "var(--wp--custom--site-container-x-padding)"
+			}
 		}
 	},
 	"templateParts": [
 		{
-			"area": "header",
+			"area": "uncategorized",
 			"name": "header",
 			"title": "Header"
 		},
 		{
-			"area": "footer",
-			"name": "footer",
-			"title": "Footer"
+			"area": "uncategorized",
+			"name": "footer-logos",
+			"title": "Footer logos"
+		},
+		{
+			"area": "uncategorized",
+			"name": "socials",
+			"title": "Social links"
 		}
 	]
 }

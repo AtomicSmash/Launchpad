@@ -1,5 +1,15 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.15
+
+### Major Changes
+
+- 53d1f54: Convert from block theme to classic theme
+
+### Minor Changes
+
+- 72c5a95: Add classic theme header and footer
+
 ## 1.0.0-beta.14
 
 ### Patch Changes

@@ -68,19 +68,22 @@ body {
 }
 
 // Force footer to the bottom of the page.
-.wp-site-blocks {
+.site-blocks {
 	display: flex !important;
 	flex-direction: column;
 	gap: var(--wp--preset--spacing--0);
 	min-height: var(--body-min-height);
 }
 
-.wp-site-blocks > main {
+.site-blocks > .template-content {
 	flex-grow: 1;
+	padding-inline: var(--wp--style--root--padding-left)
+		var(--wp--style--root--padding-right);
 }
 
-.wp-site-blocks > * {
-	margin-block-start: var(--wp--preset--spacing--0) !important;
+.contained {
+	max-width: var(--wp--style--global--content-size);
+	margin-inline: auto;
 }
 
 img,

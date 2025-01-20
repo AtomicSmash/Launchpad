@@ -7,7 +7,7 @@
 
 namespace Launchpad;
 
-define( 'LAUNCHPAD_THEME_VERSION', '1.0.0-beta.14' );
+define( 'LAUNCHPAD_THEME_VERSION', '1.0.0-beta.15' );
 
 // Require autoloader.
 require __DIR__ . '/vendor/autoload.php';
@@ -25,6 +25,7 @@ require_once __DIR__ . '/functions/body-class.php';
 require_once __DIR__ . '/functions/custom-post-types.php';
 require_once __DIR__ . '/functions/enqueue-assets.php';
 require_once __DIR__ . '/functions/mailtrap.php';
+require_once __DIR__ . '/functions/menus.php';
 require_once __DIR__ . '/functions/sanitisation.php';
 require_once __DIR__ . '/functions/theme-setup.php';
 require_once __DIR__ . '/functions/updates.php';

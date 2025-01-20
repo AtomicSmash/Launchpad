@@ -1,8 +1,14 @@
+@import "breakpoints";
+
 @import "partials/resets";
 @import "partials/typography";
 
 // WP Core and 3rd party blocks
 // @import "partials/blocks/example";
+
+// Template parts
+@import "partials/parts/header";
+@import "partials/parts/footer";
 
 // Patterns
 @import "partials/patterns/launchpad-cta";
