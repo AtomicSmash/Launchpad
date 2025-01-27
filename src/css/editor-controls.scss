@@ -22,3 +22,38 @@
 	padding: 1rem;
 	width: auto;
 }
+
+.icon-select {
+	display: grid;
+	gap: 0.5rem;
+	grid-template-columns: repeat(auto-fill, 2rem);
+
+	&-icon {
+		background-color: transparent;
+		border: 0;
+		cursor: pointer;
+		height: 2rem;
+		margin: 0;
+		padding: 0;
+		width: 2rem;
+	}
+
+	&-icon:hover {
+		background-color: rgb(239 239 239);
+	}
+
+	&-icon:focus {
+		outline: 2px solid
+			var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+	}
+
+	&-icon.is-selected {
+		border: 2px solid
+			var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+	}
+
+	&-icon svg {
+		height: 100%;
+		width: 100%;
+	}
+}

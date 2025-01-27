@@ -81,9 +81,20 @@ body {
 		var(--wp--style--root--padding-right);
 }
 
-.contained {
+.contained > *:not(.alignfull) {
 	max-width: var(--wp--style--global--content-size);
 	margin-inline: auto;
+}
+
+.contained > .alignwide {
+	max-width: var(--wp--style--global--wide-size);
+}
+
+.contained > .alignfull {
+	margin-inline: calc(-1 * var(--wp--style--root--padding-left))
+		calc(-1 * var(--wp--style--root--padding-right));
+	padding-inline: var(--wp--style--root--padding-left)
+		var(--wp--style--root--padding-right);
 }
 
 img,

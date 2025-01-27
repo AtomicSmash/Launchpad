@@ -1,3 +1,4 @@
+import type { IconMetaData } from "@plugin/blocks/svgs.editor";
 import { __ } from "@wordpress/i18n";
 
 /**
@@ -8,11 +9,8 @@ import { __ } from "@wordpress/i18n";
  */
 export const iconMetaData = {
 	"yellow-arrow": {
-		type: "theme",
 		title: __("Yellow arrow", "launchpad"),
+		makeAvailableToUser: true,
 	},
-} as const satisfies Record<
-	string,
-	{ title: string; type: "theme" | "blockIcon" | "ui" }
->;
+} as const satisfies IconMetaData;
 export type IconNames = keyof typeof iconMetaData;

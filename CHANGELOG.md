@@ -1,5 +1,20 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.16
+
+### Major Changes
+
+- 7c98989: Remove icon block plugin
+
+### Minor Changes
+
+- 7c98989: Add icon block and register icon libraries
+- 1d1af99: Add PHP icon function
+
+### Patch Changes
+
+- 1d1af99: Fix reset styles for classic theme
+
 ## 1.0.0-beta.15
 
 ### Major Changes
