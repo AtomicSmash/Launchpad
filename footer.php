@@ -23,6 +23,13 @@ if ( has_nav_menu( ( 'footer_navigation_3' ) ) ) {
 	$footer_navigation_3 = get_term( $menu_locations['footer_navigation_3'], 'nav_menu' );
 	$footer_navigation_3_name = $footer_navigation_3->name;
 }
+
+	$site_title = get_bloginfo( 'name' );
+	$footer_site_title_override = get_field( 'footer_site_title_override', 'option' );
+
+if ( ! empty( $footer_site_title_override ) ) {
+	$site_title = $footer_site_title_override;
+}
 ?>
 
 		<footer id="footer" role="contentinfo" class="site-footer footer">
@@ -111,7 +118,7 @@ if ( has_nav_menu( ( 'footer_navigation_3' ) ) ) {
 						<?php block_template_part( 'footer-logos' ); ?>
 					</div>
 					<div class="footer__details">
-						<p>©Launchpad <?php echo esc_html( gmdate( 'Y' ) ); ?></p>
+						<p>© <?php echo esc_html( $site_title ) . ' ' . esc_html( gmdate( 'Y' ) ); ?></p>
 						<span>Website built by <a href="https://atomicsmash.co.uk/" target="_blank">Atomic Smash</a></span>
 					</div>
 				</div>

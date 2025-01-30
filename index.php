@@ -6,7 +6,7 @@
 ?>
 <?php get_header(); ?>
 <div class="template-content">
-	<main id="skip-link-target" class="contained">
+	<main id="skip-link-target" class="flow contained">
 		<?php the_content(); ?>
 	</main>
 </div>

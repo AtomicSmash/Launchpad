@@ -1,5 +1,16 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.17
+
+### Minor Changes
+
+- dfc70e4: Use Launchpad icon set
+- 2bf5958: Added site name and override to footer
+
+### Patch Changes
+
+- 4e4bf62: Fix reset styles
+
 ## 1.0.0-beta.16
 
 ### Major Changes

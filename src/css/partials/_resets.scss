@@ -81,20 +81,36 @@ body {
 		var(--wp--style--root--padding-right);
 }
 
-.contained > *:not(.alignfull) {
-	max-width: var(--wp--style--global--content-size);
-	margin-inline: auto;
+.contained {
+	// Alternative option. If using this, remove padding from template-content and all .alignfull styles below.
+	// > * {
+	// 	padding-inline: var(--wp--style--root--padding-left)
+	// 		var(--wp--style--root--padding-right);
+	// }
+
+	> .alignwide {
+		max-width: var(--wp--style--global--wide-size);
+	}
+
+	> :where(:not(.alignfull)) {
+		max-width: var(--wp--style--global--content-size);
+		margin-inline: auto;
+	}
+
+	.alignfull {
+		margin-inline: calc(-1 * var(--wp--style--root--padding-left))
+			calc(-1 * var(--wp--style--root--padding-right));
+		padding-inline: var(--wp--style--root--padding-left)
+			var(--wp--style--root--padding-right);
+	}
 }
 
-.contained > .alignwide {
-	max-width: var(--wp--style--global--wide-size);
+.flow > * {
+	margin-block: var(--wp--style--block-gap) 0;
 }
 
-.contained > .alignfull {
-	margin-inline: calc(-1 * var(--wp--style--root--padding-left))
-		calc(-1 * var(--wp--style--root--padding-right));
-	padding-inline: var(--wp--style--root--padding-left)
-		var(--wp--style--root--padding-right);
+.flow > :first-child {
+	margin-block-start: 0;
 }
 
 img,
