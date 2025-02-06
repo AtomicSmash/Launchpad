@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.18
+
+### Minor Changes
+
+- 20d242c: Add button reset class
+
 ## 1.0.0-beta.17
 
 ### Minor Changes

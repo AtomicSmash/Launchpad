@@ -11,6 +11,13 @@ select {
 	font: inherit;
 }
 
+:where(button.reset) {
+	background-color: transparent;
+	color: inherit;
+	border: none;
+	padding: 0;
+}
+
 .has-heading-1-font-size {
 	line-height: var(--wp--custom--line-height--heading-1);
 }

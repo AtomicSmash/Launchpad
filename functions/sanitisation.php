@@ -51,6 +51,7 @@ add_filter(
 			'allowfullscreen' => array(),
 			'referrerpolicy' => array(),
 		);
+		$tags['img']['draggable'] = array();
 		return $tags;
 	},
 	10,
