@@ -1,0 +1,50 @@
+.search-results {
+	.searchform {
+		margin-block-end: var(--wp--preset--spacing--2);
+	}
+
+	.c-search-result {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		gap: var(--wp--preset--spacing--2);
+	}
+
+	.c-search-result:not(:first-child),
+	.pagination {
+		margin-block-start: var(--wp--preset--spacing--2);
+	}
+
+	.c-search-result__image_wrapper {
+		flex: 1 0 18.75rem;
+		aspect-ratio: 3/2;
+	}
+
+	.c-search-result__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.c-search-result__content {
+		flex: 9999 1 30rem;
+	}
+
+	.c-search-result__title {
+		margin-block: var(--wp--preset--spacing--0);
+	}
+
+	.c-search-result__post_type {
+		--font-size-modifier: 0.5;
+
+		line-height: 1.5;
+		font-size: calc(1em * var(--font-size-modifier));
+		position: relative;
+		bottom: calc(1em * ((1 - var(--font-size-modifier)) / 2));
+	}
+
+	.c-search-result__excerpt,
+	.c-search-result__link {
+		margin-block-start: var(--wp--preset--spacing--2);
+	}
+}

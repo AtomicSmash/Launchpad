@@ -6,6 +6,12 @@
 // WP Core and 3rd party blocks
 // @import "partials/blocks/example";
 
+// Components
+@import "partials/components/chip";
+
+// Templates
+@import "partials/templates/search";
+
 // Template parts
 @import "partials/parts/header";
 @import "partials/parts/footer";

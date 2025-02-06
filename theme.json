@@ -30,19 +30,99 @@
 					"color": "#2B2B2B"
 				},
 				{
+					"slug": "primary",
+					"name": "Primary",
+					"color": "var(--wp--preset--color--bright-grey)"
+				},
+				{
+					"slug": "secondary",
+					"name": "Secondary",
+					"color": "var(--wp--preset--color--dark-grey)"
+				},
+				{
+					"slug": "accent",
+					"name": "Accent",
+					"color": "var(--wp--preset--color--black)"
+				},
+				{
+					"slug": "accent-inverse",
+					"name": "Accent inverse",
+					"color": "var(--wp--preset--color--white)"
+				},
+				{
+					"slug": "text",
+					"name": "text",
+					"color": "#2B2B2B"
+				},
+				{
+					"slug": "headings",
+					"name": "headings",
+					"color": "#2B2B2B"
+				},
+				{
+					"slug": "focus",
+					"name": "focus",
+					"color": "var(--wp--preset--color--accent)"
+				},
+				{
+					"slug": "links",
+					"name": "links",
+					"color": "var(--wp--preset--color--accent)"
+				},
+				{
 					"slug": "white",
 					"name": "White",
-					"color": "#FEFFFE"
+					"color": "rgb(255 255 255)"
 				},
 				{
 					"slug": "black",
 					"name": "Black",
-					"color": "#000"
+					"color": "rgb(0 0 0)"
 				},
 				{
-					"slug": "required",
-					"name": "Required",
-					"color": "#D23636"
+					"slug": "success-dark",
+					"name": "Success (Dark)",
+					"color": "#166534"
+				},
+				{
+					"slug": "success-mid",
+					"name": "Success (Mid)",
+					"color": "#1d8644"
+				},
+				{
+					"slug": "success-light",
+					"name": "Success (Light)",
+					"color": "#e5f4e0"
+				},
+				{
+					"slug": "progress-dark",
+					"name": "Progress (Dark)",
+					"color": "#806a00"
+				},
+				{
+					"slug": "progress-mid",
+					"name": "Progress (Mid)",
+					"color": "#ecbe23"
+				},
+				{
+					"slug": "progress-light",
+					"name": "Progress (Light)",
+					"color": "#fdf9e6"
+				},
+				{
+					"slug": "error-dark",
+					"name": "Error (Dark)",
+					"color": "#9b0000"
+				},
+				{
+					"slug": "error-mid",
+					"name": "Error (Mid)",
+					"color": "#da2121"
+				},
+				{
+					"slug": "error-light",
+					"name": "Error (Light)",
+					"color": "#ffeaea"
 				}
 			]
 		},
@@ -181,6 +261,18 @@
 				"heading-6": "clamp(1.3rem, 0.574vw + 1.171rem, 1.688rem)",
 				"body": "1.5",
 				"small": "1.5"
+			},
+			"z-index": {
+				"wp-admin-bar": "99,999 (REFERENCE)",
+				"navigation-popover": "40",
+				"site-header": "35",
+				"wordpress-block-toolbar": "31 (REFERENCE)",
+				"site-overlay": "30"
+			},
+			"radius": {
+				"none": "0",
+				"full": "9999px",
+				"circle": "50%"
 			}
 		},
 		"layout": {

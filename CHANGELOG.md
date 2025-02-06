@@ -1,5 +1,20 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.19
+
+### Minor Changes
+
+- 4861e9f: Add default radius variables
+- 4ec82fe: Add theme screenshot
+- 4861e9f: Add helper function for getting the featured image with a placeholder image
+- 4861e9f: Add default colours to theme.json
+- 4861e9f: Add search results template
+
+### Patch Changes
+
+- 4ec82fe: Fixes to the header related to the new navigation block
+- 4861e9f: Merge and rename theme options
+
 ## 1.0.0-beta.18
 
 ### Minor Changes

@@ -1,7 +1,33 @@
 {
-    "key": "group_6799efc6aae12",
-    "title": "Site Options",
+    "key": "group_678a71b86aac0",
+    "title": "Launchpad options",
     "fields": [
+        {
+            "key": "field_678a71b8f9c28",
+            "label": "Placeholder image",
+            "name": "placeholder_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
         {
             "key": "field_6799efc645959",
             "label": "Footer Site Title Override",
@@ -29,7 +55,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "site-options"
+                "value": "launchpad-options"
             }
         ]
     ],
@@ -42,5 +68,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1738141732
+    "modified": 1738860172
 }

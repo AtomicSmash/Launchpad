@@ -1,10 +1,10 @@
 {
     "key": "ui_options_page_6799efb3ee7b1",
-    "title": "Site Options",
+    "title": "Launchpad options",
     "active": true,
     "menu_order": 0,
-    "page_title": "Site Options",
-    "menu_slug": "site-options",
+    "page_title": "Launchpad options",
+    "menu_slug": "launchpad-options",
     "parent_slug": "none",
     "advanced_configuration": 0,
     "icon_url": "",
@@ -22,5 +22,5 @@
     "data_storage": "options",
     "post_id": "",
     "autoload": 0,
-    "modified": 1738141631
+    "modified": 1738860155
 }
