@@ -50,23 +50,23 @@
 					"color": "var(--wp--preset--color--white)"
 				},
 				{
-					"slug": "text",
-					"name": "text",
+					"slug": "text-base",
+					"name": "Text",
 					"color": "#2B2B2B"
 				},
 				{
 					"slug": "headings",
-					"name": "headings",
+					"name": "Headings",
 					"color": "#2B2B2B"
 				},
 				{
 					"slug": "focus",
-					"name": "focus",
+					"name": "Focus",
 					"color": "var(--wp--preset--color--accent)"
 				},
 				{
 					"slug": "links",
-					"name": "links",
+					"name": "Links",
 					"color": "var(--wp--preset--color--accent)"
 				},
 				{
@@ -264,6 +264,8 @@
 			},
 			"z-index": {
 				"wp-admin-bar": "99,999 (REFERENCE)",
+				"lightbox-button": "50",
+				"lightbox": "45",
 				"navigation-popover": "40",
 				"site-header": "35",
 				"wordpress-block-toolbar": "31 (REFERENCE)",

@@ -1,5 +1,16 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.20
+
+### Major Changes
+
+- 4336dd7: Update colour variables to avoid conflict and improve presentation
+- fe0eb54: Move sanitisation to blocks plugin
+
+### Patch Changes
+
+- 80f54fe: Add cursor pointer style to button reset styles
+
 ## 1.0.0-beta.19
 
 ### Minor Changes
