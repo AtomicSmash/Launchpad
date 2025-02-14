@@ -7,7 +7,7 @@
 
 namespace Launchpad;
 
-define( 'LAUNCHPAD_THEME_VERSION', '1.0.0-beta.20' );
+define( 'LAUNCHPAD_THEME_VERSION', '1.0.0-beta.21' );
 
 // Require autoloader.
 require __DIR__ . '/vendor/autoload.php';

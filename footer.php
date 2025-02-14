@@ -33,86 +33,88 @@ if ( ! empty( $footer_site_title_override ) ) {
 ?>
 
 		<footer id="footer" role="contentinfo" class="site-footer footer">
-			<div class="footer__row">
-				<div class="footer__column">
-					<div>
-						<?php if ( has_custom_logo() ) : ?>
-							<div class="is-default-size wp-block-site-logo">
-								<div class="footer__site-logo"><?php the_custom_logo(); ?></div>
+			<div class="is-layout-constrained has-global-padding">
+				<div class="footer__row">
+					<div class="footer__column">
+						<div>
+							<?php if ( has_custom_logo() ) : ?>
+								<div class="is-default-size wp-block-site-logo">
+									<div class="footer__site-logo"><?php the_custom_logo(); ?></div>
+								</div>
+							<?php endif; ?>
+							<div class="footer__socials">
+								<?php block_template_part( 'socials' ); ?>
+							</div>
+						</div>
+						<a href="#top" class="footer__back-to-top">Back to top</a>
+					</div>
+					<nav class="footer__navigation">
+						<?php if ( has_nav_menu( 'footer_navigation_1' ) ) : ?>
+							<div class="footer__navigation-group">
+								<h3 class="footer__navigation-heading"><?php echo esc_html( $footer_navigation_1_name ); ?></h3>
+								<ul class="footer__navigation-list footer__navigation-list--one">
+									<?php
+									wp_nav_menu(
+										array(
+											'theme_location' => 'footer_navigation_1',
+											'items_wrap'     => '%3$s',
+											'container'      => false,
+											'depth'          => 1,
+											'link_before'    => '<span>',
+											'link_after'     => '</span>',
+											'fallback_cb'    => false,
+										)
+									);
+									?>
+								</ul>
 							</div>
 						<?php endif; ?>
-						<div class="footer__socials">
-							<?php block_template_part( 'socials' ); ?>
-						</div>
-					</div>
-					<a href="#top" class="footer__back-to-top">Back to top</a>
+	
+						<?php if ( has_nav_menu( 'footer_navigation_2' ) ) : ?>
+							<div class="footer__navigation-group">
+							<h3 class="footer__navigation-heading"><?php echo esc_html( $footer_navigation_2_name ); ?></h3>
+								<ul class="footer__navigation-list footer__navigation-list--two">
+									<?php
+									wp_nav_menu(
+										array(
+											'theme_location' => 'footer_navigation_2',
+											'items_wrap'     => '%3$s',
+											'container'      => false,
+											'depth'          => 1,
+											'link_before'    => '<span>',
+											'link_after'     => '</span>',
+											'fallback_cb'    => false,
+										)
+									);
+									?>
+								</ul>
+							</div>
+						<?php endif; ?>
+	
+						<?php if ( has_nav_menu( 'footer_navigation_3' ) ) : ?>
+							<div class="footer__navigation-group">
+							<h3 class="footer__navigation-heading"><?php echo esc_html( $footer_navigation_3_name ); ?></h3>
+								<ul class="footer__navigation-list footer__navigation-list--three">
+									<?php
+									wp_nav_menu(
+										array(
+											'theme_location' => 'footer_navigation_3',
+											'items_wrap'     => '%3$s',
+											'container'      => false,
+											'depth'          => 1,
+											'link_before'    => '<span>',
+											'link_after'     => '</span>',
+											'fallback_cb'    => false,
+										)
+									);
+									?>
+								</ul>
+							</div>
+						<?php endif; ?>
+					</nav>
 				</div>
-				<nav class="footer__navigation">
-					<?php if ( has_nav_menu( 'footer_navigation_1' ) ) : ?>
-						<div class="footer__navigation-group">
-							<h3 class="footer__navigation-heading"><?php echo esc_html( $footer_navigation_1_name ); ?></h3>
-							<ul class="footer__navigation-list footer__navigation-list--one">
-								<?php
-								wp_nav_menu(
-									array(
-										'theme_location' => 'footer_navigation_1',
-										'items_wrap'     => '%3$s',
-										'container'      => false,
-										'depth'          => 1,
-										'link_before'    => '<span>',
-										'link_after'     => '</span>',
-										'fallback_cb'    => false,
-									)
-								);
-								?>
-							</ul>
-						</div>
-					<?php endif; ?>
-
-					<?php if ( has_nav_menu( 'footer_navigation_2' ) ) : ?>
-						<div class="footer__navigation-group">
-						<h3 class="footer__navigation-heading"><?php echo esc_html( $footer_navigation_2_name ); ?></h3>
-							<ul class="footer__navigation-list footer__navigation-list--two">
-								<?php
-								wp_nav_menu(
-									array(
-										'theme_location' => 'footer_navigation_2',
-										'items_wrap'     => '%3$s',
-										'container'      => false,
-										'depth'          => 1,
-										'link_before'    => '<span>',
-										'link_after'     => '</span>',
-										'fallback_cb'    => false,
-									)
-								);
-								?>
-							</ul>
-						</div>
-					<?php endif; ?>
-
-					<?php if ( has_nav_menu( 'footer_navigation_3' ) ) : ?>
-						<div class="footer__navigation-group">
-						<h3 class="footer__navigation-heading"><?php echo esc_html( $footer_navigation_3_name ); ?></h3>
-							<ul class="footer__navigation-list footer__navigation-list--three">
-								<?php
-								wp_nav_menu(
-									array(
-										'theme_location' => 'footer_navigation_3',
-										'items_wrap'     => '%3$s',
-										'container'      => false,
-										'depth'          => 1,
-										'link_before'    => '<span>',
-										'link_after'     => '</span>',
-										'fallback_cb'    => false,
-									)
-								);
-								?>
-							</ul>
-						</div>
-					<?php endif; ?>
-				</nav>
 			</div>
-			<div class="footer__full-width-row">
+			<div class="footer__full-width-row is-layout-constrained has-global-padding">
 				<div class="footer__full-width-row-container">
 					<div class="footer__logos">
 						<?php block_template_part( 'footer-logos' ); ?>

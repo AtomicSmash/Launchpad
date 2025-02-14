@@ -23,19 +23,63 @@
 	width: auto;
 }
 
+.icon-select-group-accordion:not(:last-child) {
+	margin-bottom: 0.5em;
+}
+
+h3.icon-select-group-accordion-header {
+	margin-bottom: 0;
+}
+
+h3.icon-select-group-accordion-header:not(:last-child) {
+	margin-bottom: 0.5em;
+}
+
+.icon-select-group-accordion-header-button {
+	display: flex;
+	width: 100%;
+	padding: 0.5em 1em;
+	height: auto;
+}
+
+.icon-select-group-accordion-title {
+	flex: 1;
+	text-align: left;
+}
+
+.icon-select-group-accordion-icon-count {
+	display: block;
+	background: var(--wp-admin-theme-color);
+	color: #fff;
+	padding: 0.1rem 0.25rem;
+	border-radius: 9999px;
+	margin-left: 0.5rem;
+}
+
 .icon-select {
+	--max-icon-rows-to-show: 5;
+	--icon-size: 2rem;
+	--icon-gap: 0.5rem;
+
 	display: grid;
-	gap: 0.5rem;
-	grid-template-columns: repeat(auto-fill, 2rem);
+	gap: var(--icon-gap);
+	grid-template-columns: repeat(auto-fill, minmax(var(--icon-size), 1fr));
+	margin-bottom: 0.5rem;
+	padding: 0 1em;
+	max-height: calc(
+		(var(--icon-size) * var(--max-icon-rows-to-show)) +
+			(var(--icon-gap) * (var(--max-icon-rows-to-show) - 1))
+	);
+	overflow: auto;
 
 	&-icon {
 		background-color: transparent;
 		border: 0;
 		cursor: pointer;
-		height: 2rem;
+		height: var(--icon-size);
 		margin: 0;
 		padding: 0;
-		width: 2rem;
+		width: var(--icon-size);
 	}
 
 	&-icon:hover {

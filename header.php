@@ -15,6 +15,6 @@
 <body <?php body_class(); ?>>
 	<a class="skip-link screen-reader-text" href="#skip-link-target">Skip to content</a>
 	<div class="site-blocks">
-		<header id="header" role="banner" class="site-header">
+		<header id="header" role="banner" class="site-header is-layout-constrained has-global-padding">
 			<?php block_template_part( 'header' ); ?>
 		</header>

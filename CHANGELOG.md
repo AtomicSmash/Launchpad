@@ -1,5 +1,12 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.21
+
+### Patch Changes
+
+- d0980da: Fix reset styles attempt 2
+- 9d1fd2c: Fix broken icon svgs
+
 ## 1.0.0-beta.20
 
 ### Major Changes
