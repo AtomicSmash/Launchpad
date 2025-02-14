@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.22
+
+### Patch Changes
+
+- 28896cb: Fix default header bug related to subMenuId
+
 ## 1.0.0-beta.21
 
 ### Patch Changes
