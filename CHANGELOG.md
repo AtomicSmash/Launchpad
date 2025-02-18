@@ -1,5 +1,12 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.23
+
+### Patch Changes
+
+- 847f6b7: Use same alias name as child projects
+- 70bec22: Fix padding in the editor view so blocks aren't on the edge of the screen
+
 ## 1.0.0-beta.22
 
 ### Patch Changes

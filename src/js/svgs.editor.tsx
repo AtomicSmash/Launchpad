@@ -1,4 +1,4 @@
-import type { IconMetaData } from "@plugin/blocks/svgs.editor";
+import type { IconMetaData } from "@launchpadBlocks/svgs.editor";
 import { __ } from "@wordpress/i18n";
 
 /**

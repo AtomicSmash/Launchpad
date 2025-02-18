@@ -1,5 +1,5 @@
 import type { IconNames } from "./svgs.editor";
-import type { IconLibraries, IconMetaData } from "@plugin/blocks/svgs.editor";
+import type { IconLibraries, IconMetaData } from "@launchpadBlocks/svgs.editor";
 import domReady from "@wordpress/dom-ready";
 import { addFilter } from "@wordpress/hooks";
 import { __ } from "@wordpress/i18n";
