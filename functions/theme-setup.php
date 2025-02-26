@@ -24,6 +24,19 @@ function theme_setup() {
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\theme_setup', 15 );
 
 /**
+ * Update settings once when the theme is switched to.
+ */
+function initialise_theme_settings() {
+	update_option( 'posts_per_page', 12 );
+	global $wp_rewrite;
+	if ( ! $wp_rewrite->using_permalinks() ) {
+		$wp_rewrite->set_permalink_structure( '/%postname%/' );
+		$wp_rewrite->flush_rules();
+	}
+}
+add_action( 'after_switch_theme', __NAMESPACE__ . '\\initialise_theme_settings' );
+
+/**
  * Apply ugly hack to set correct root editor container classes
  *
  * Setting settings.useRootPaddingAwareAlignments to true should result in the global

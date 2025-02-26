@@ -1,5 +1,16 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.24
+
+### Minor Changes
+
+- be693c5: Add 404 page with CMS editable template
+- 391f94a: Adding archives for home and default archive
+
+### Patch Changes
+
+- d605549: Fix issues with not having a WP loop in index template
+
 ## 1.0.0-beta.23
 
 ### Patch Changes
