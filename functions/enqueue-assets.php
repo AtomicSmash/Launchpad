@@ -23,17 +23,6 @@ function add_editor_content_styles() {
 	if ( is_admin() ) {
 		$assets = new Assets();
 
-		$main_stylesheet = $assets->get_cached_asset_from_parent( '/css/styles.css' );
-		if ( is_wp_error( $main_stylesheet ) ) {
-			/**
-			 * $main_stylesheet is WP_Error
-			 *
-			 * @var WP_Error $main_stylesheet
-			 */
-			throw new Error( wp_kses_post( $main_stylesheet->get_error_message() ) );
-		}
-		wp_enqueue_style( 'launchpad-theme', $main_stylesheet['source'], $main_stylesheet['dependencies'], $main_stylesheet['version'] );
-
 		$editor_content_stylesheet = $assets->get_cached_asset_from_parent( '/css/editor-content.css' );
 		if ( is_wp_error( $editor_content_stylesheet ) ) {
 			/**
@@ -149,12 +138,3 @@ function editor_scripts() {
 	);
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\editor_scripts', 10 );
-
-/**
- * Fix for enqueue_block_assets loading twice in editor.
- */
-function remove_iframe_styles_from_editor() {
-	wp_dequeue_style( 'launchpad-theme' );
-	wp_dequeue_style( 'launchpad-editor-content' );
-}
-add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\remove_iframe_styles_from_editor', 10 );

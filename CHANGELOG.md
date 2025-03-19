@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.25
+
+### Patch Changes
+
+- eeb4c6e: Bugfix styling for old API versions
+
 ## 1.0.0-beta.24
 
 ### Minor Changes

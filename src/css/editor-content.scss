@@ -1,3 +1,8 @@
 /**
  * This file contains any styling which affects the content and should only be shown on the editor side
  */
+// All front end styles
+@use "styles";
+
+// Prefixes all declarations (including any imported above) with a class to scope it to just the editor content
+@context wordpressEditor;
