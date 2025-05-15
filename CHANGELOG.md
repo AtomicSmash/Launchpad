@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.26
+
+### Minor Changes
+
+- 91786d7: Add class to placeholder image
+
 ## 1.0.0-beta.25
 
 ### Patch Changes

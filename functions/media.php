@@ -17,6 +17,11 @@ function get_featured_image( string $size = 'thumbnail', $attributes = array() )
 	if ( has_post_thumbnail() ) {
 		$image = get_the_post_thumbnail( null, $size, $attributes );
 	} elseif ( false !== $image_id ) {
+		if ( isset( $attributes['class'] ) ) {
+			$attributes['class'] = $attributes['class'] . ' placeholder-image';
+		} else {
+			$attributes['class'] = 'placeholder-image';
+		}
 		$image = wp_get_attachment_image( $image_id, $size, false, $attributes );
 	}
 	return $image;
