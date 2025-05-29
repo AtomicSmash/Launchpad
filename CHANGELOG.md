@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.27
+
+### Minor Changes
+
+- 50efaf9: Use no results template part to allow overriding
+
 ## 1.0.0-beta.26
 
 ### Minor Changes

@@ -65,9 +65,7 @@
 			endwhile;
 			the_posts_pagination();
 		else :
-			?>
-			<p><?php esc_html_e( 'Sorry, no posts matched your criteria.', 'launchpad' ); ?></p>
-			<?php
+			get_template_part( 'parts/no-results', 'search' );
 		endif;
 		?>
 	</main>
