@@ -1,8 +1,9 @@
 /**
  * This file contains any styling which affects the content and should only be shown on the editor side
  */
-// All front end styles
-@use "styles";
+@use "sass:meta";
 
-// Prefixes all declarations (including any imported above) with a class to scope it to just the editor content
-@context wordpressEditor;
+// Is root container ensures the styles are only applied to content in the editor.
+.is-root-container {
+	@include meta.load-css("styles");
+}

@@ -1,5 +1,15 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.28
+
+### Minor Changes
+
+- a1cee02: Update footer logos part to use logo banner block
+
+### Patch Changes
+
+- 39b5ad0: Remove postcss context requirement
+
 ## 1.0.0-beta.27
 
 ### Minor Changes
