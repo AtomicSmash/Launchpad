@@ -1,0 +1,18 @@
+.c-chip {
+	background-color: var(--wp--preset--color--accent);
+	color: var(--wp--preset--color--accent-text);
+	padding-inline: var(--wp--preset--spacing--1);
+	padding-block: 0;
+	margin-inline: var(--wp--preset--spacing--1);
+	padding: var(--wp--preset--spacing--1);
+	display: inline-block;
+	border-radius: var(--wp--custom--radius--full);
+}
+
+.c-chip--square {
+	border-radius: 0;
+}
+
+.c-chip--rounded {
+	border-radius: var(--wp--custom--radius--rounded);
+}

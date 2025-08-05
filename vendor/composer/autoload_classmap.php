@@ -73,6 +73,7 @@ return array(
     'Args\\wp_update_post' => $vendorDir . '/johnbillion/args/src/wp_update_post.php',
     'Args\\wp_update_term' => $vendorDir . '/johnbillion/args/src/wp_update_term.php',
     'Args\\wp_update_user' => $vendorDir . '/johnbillion/args/src/wp_update_user.php',
+    'AtomicSmash\\CompilerHelpers\\Assets' => $vendorDir . '/atomicsmash/compiler-helpers/classes/Assets.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'ExtCPTs\\Args\\PostType' => $vendorDir . '/johnbillion/extended-cpts/src/Args/PostType.php',
     'ExtCPTs\\Args\\Taxonomy' => $vendorDir . '/johnbillion/extended-cpts/src/Args/Taxonomy.php',

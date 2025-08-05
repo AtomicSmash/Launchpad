@@ -1,0 +1,23 @@
+@custom-media --mobile (max-width: 639px);
+@custom-media --tablet (min-width: 640px) and (max-width: 1023px);
+@custom-media --desktop (min-width: 1024px) and (max-width: 1279px);
+@custom-media --ultra-wide (min-width: 1280px);
+
+// NOTE: These breakpoints are used in JS too, if changing these values, you should also change the values in breakpoints.ts.
+
+// TO USE:
+
+// Target only mobile:
+// @media (--mobile) {}
+// Gets translated to: @media (max-width: 639px) {}
+
+// Target everything up to desktop
+// @media (--mobile), (--tablet) {}
+// Gets translated to: @media (max-width:639px),(min-width:640px) and (max-width:1023px) {}
+
+// Target everything larger than tablet
+// @media (--desktop), (--ultra-wide) {}
+// Gets translated to: @media (min-width: 1024px) and (max-width: 1279px),(min-width: 1280px) {}
+
+// To use in a blocks stylesheet, you must include this field by including this at the top of the file
+// @use "sitecss:breakpoints";

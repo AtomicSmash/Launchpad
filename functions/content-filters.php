@@ -10,7 +10,7 @@ namespace Launchpad\Content\Filters;
  *
  * @param string $title the current title to be filtered.
  */
-function update_archive_title( $title ) {
+function update_archive_title( string $title ): string {
 	if ( is_category() ) {
 		$title = single_cat_title( '', false );
 	} elseif ( is_tag() ) {

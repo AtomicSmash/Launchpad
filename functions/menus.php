@@ -8,7 +8,7 @@ namespace Launchpad\Menus;
 /**
  * Register navigation menus
  */
-function register_menus() {
+function register_menus(): void {
 	register_nav_menus(
 		array(
 			'footer_navigation_1' => __( 'Footer Navigation 1', 'launchpad' ),

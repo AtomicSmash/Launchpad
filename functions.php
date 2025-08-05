@@ -7,7 +7,7 @@
 
 namespace Launchpad;
 
-define( 'LAUNCHPAD_THEME_VERSION', '1.0.0-beta.28' );
+define( 'LAUNCHPAD_THEME_VERSION', '1.0.0-beta.29' );
 
 // Require autoloader.
 require __DIR__ . '/vendor/autoload.php';
@@ -15,6 +15,10 @@ require __DIR__ . '/vendor/autoload.php';
 // Blocks
 require_once __DIR__ . '/functions/blocks/patterns.php';
 require_once __DIR__ . '/functions/blocks/styles.php';
+
+
+// Components
+require_once __DIR__ . '/functions/components/chip.php';
 
 // Compatibility
 require_once __DIR__ . '/functions/compatibility/wp-rocket.php';
@@ -25,6 +29,7 @@ require_once __DIR__ . '/functions/body-class.php';
 require_once __DIR__ . '/functions/content-filters.php';
 require_once __DIR__ . '/functions/custom-post-types.php';
 require_once __DIR__ . '/functions/enqueue-assets.php';
+require_once __DIR__ . '/functions/gravity-forms.php';
 require_once __DIR__ . '/functions/helpers.php';
 require_once __DIR__ . '/functions/mailtrap.php';
 require_once __DIR__ . '/functions/media.php';

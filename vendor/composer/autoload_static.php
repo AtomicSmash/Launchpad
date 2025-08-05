@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitf5e24117f038ff04b856c264e76e1689
+class ComposerStaticInit713c7a5e92a7bdbee67728483bdf8fb6
 {
     public static $files = array (
         'ac773ca18bc86f9208de2ed8068423eb' => __DIR__ . '/..' . '/johnbillion/extended-cpts/functions.php',
@@ -22,6 +22,7 @@ class ComposerStaticInitf5e24117f038ff04b856c264e76e1689
         ),
         'A' => 
         array (
+            'AtomicSmash\\CompilerHelpers\\' => 28,
             'Args\\' => 5,
         ),
     );
@@ -38,6 +39,10 @@ class ComposerStaticInitf5e24117f038ff04b856c264e76e1689
         'ExtCPTs\\' => 
         array (
             0 => __DIR__ . '/..' . '/johnbillion/extended-cpts/src',
+        ),
+        'AtomicSmash\\CompilerHelpers\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/atomicsmash/compiler-helpers/classes',
         ),
         'Args\\' => 
         array (
@@ -113,6 +118,7 @@ class ComposerStaticInitf5e24117f038ff04b856c264e76e1689
         'Args\\wp_update_post' => __DIR__ . '/..' . '/johnbillion/args/src/wp_update_post.php',
         'Args\\wp_update_term' => __DIR__ . '/..' . '/johnbillion/args/src/wp_update_term.php',
         'Args\\wp_update_user' => __DIR__ . '/..' . '/johnbillion/args/src/wp_update_user.php',
+        'AtomicSmash\\CompilerHelpers\\Assets' => __DIR__ . '/..' . '/atomicsmash/compiler-helpers/classes/Assets.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'ExtCPTs\\Args\\PostType' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/Args/PostType.php',
         'ExtCPTs\\Args\\Taxonomy' => __DIR__ . '/..' . '/johnbillion/extended-cpts/src/Args/Taxonomy.php',
@@ -132,9 +138,9 @@ class ComposerStaticInitf5e24117f038ff04b856c264e76e1689
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitf5e24117f038ff04b856c264e76e1689::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitf5e24117f038ff04b856c264e76e1689::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitf5e24117f038ff04b856c264e76e1689::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit713c7a5e92a7bdbee67728483bdf8fb6::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit713c7a5e92a7bdbee67728483bdf8fb6::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit713c7a5e92a7bdbee67728483bdf8fb6::$classMap;
 
         }, null, ClassLoader::class);
     }

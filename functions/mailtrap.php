@@ -11,7 +11,7 @@ if ( wp_get_environment_type() !== 'production' ) {
 	 *
 	 * @param \PHPMailer\PHPMailer\PHPMailer $phpmailer The class that makes PHP's mail() function work.
 	 */
-	function mailtrap( \PHPMailer\PHPMailer\PHPMailer $phpmailer ) {
+	function mailtrap( \PHPMailer\PHPMailer\PHPMailer $phpmailer ): void {
 		// phpcs:disable WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$phpmailer->isSMTP();
 		$phpmailer->Host = 'sandbox.smtp.mailtrap.io';

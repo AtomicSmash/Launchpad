@@ -13,9 +13,11 @@ if ( wp_get_environment_type() !== 'development' ) {
 /**
  * Load ACF fields from Launchpad when in child theme.
  *
- * @param array $paths The ACF paths to load json from.
+ * @param string[] $paths The ACF paths to load json from.
+ *
+ * @return string[]
  */
-function load_acf_fields_from_launchpad( $paths ) {
+function load_acf_fields_from_launchpad( array $paths ): array {
 	$paths[] = get_template_directory() . '/acf-json';
 
 	return $paths;

@@ -13,7 +13,7 @@ add_filter( 'rocket_set_wp_cache_constant', '__return_false' );
  *
  * @link http://docs.wp-rocket.me/article/61-disable-page-caching
  */
-function disable_wp_rocket_caching_on_staging() {
+function disable_wp_rocket_caching_on_staging(): bool {
 	return wp_get_environment_type() === 'production';
 }
 add_filter( 'do_rocket_generate_caching_files', __NAMESPACE__ . '\\disable_wp_rocket_caching_on_staging' );

@@ -1,0 +1,61 @@
+// These colours are additional colours we don't want in the editor palette but we still want to define.
+// They must follow the same naming scheme as the generated css variables.
+// Disclaimer: Only set variables in here
+:root {
+	// --wp--preset--color--example: #fff;
+
+	// Colours
+	--wp--preset--color--accent: var(--wp--preset--color--primary);
+	--wp--preset--color--primary-dark: #0053cf;
+	--wp--preset--color--secondary-dark: var(--wp--preset--color--secondary);
+
+	// Validation
+	--wp--preset--color--info-dark: #1e40af;
+	--wp--preset--color--info-mid: #2563eb;
+	--wp--preset--color--info-light: #eaebfc;
+	--wp--preset--color--invalid-dark: #991b1b;
+	--wp--preset--color--invalid-mid: #dc2626;
+	--wp--preset--color--invalid-light: #f8e4e6;
+	--wp--preset--color--warning-dark: #666620;
+	--wp--preset--color--warning-mid: #eae108;
+	--wp--preset--color--warning-light: #f6f6bb;
+	--wp--preset--color--status-dark: #420d7b;
+	--wp--preset--color--status-mid: #7c25d9;
+	--wp--preset--color--status-light: #f5f1fc;
+	--wp--preset--color--valid-dark: #136131;
+	--wp--preset--color--valid-mid: #1d8644;
+	--wp--preset--color--valid-light: #d7f9de;
+
+	// Borders
+	--wp--preset--color--border-dark: #aeaeae;
+	--wp--preset--color--border-light: #d7d7d7;
+
+	// Typography
+	--wp--preset--color--primary-text: var(--wp--preset--color--rich-white);
+	--wp--preset--color--secondary-text: var(--wp--preset--color--rich-white);
+	--wp--preset--color--accent-text: var(--wp--preset--color--rich-white);
+	--wp--preset--color--elevation-high-text: var(
+		--wp--preset--color--rich-black
+	);
+	--wp--preset--color--elevation-mid-text: var(--wp--preset--color--rich-black);
+	--wp--preset--color--elevation-low-text: var(--wp--preset--color--rich-black);
+	--wp--preset--color--headings: var(--wp--preset--color--rich-black);
+	--wp--preset--color--meta-text: #a4a4a4;
+
+	// Links
+	--wp--preset--color--hyperlink: var(--wp--preset--color--primary);
+	--wp--preset--color--hyperlink-light: var(--wp--preset--color--primary);
+	--wp--preset--color--hyperlink-hover: var(--wp--preset--color--secondary);
+	--wp--preset--color--hyperlink-visited: var(--wp--preset--color--secondary);
+	--wp--preset--color--inactive-placeholder-optional: var(
+		--wp--preset--color--brand-h
+	);
+	--wp--preset--color--focus-color: #5e9ed6;
+
+	// Effects
+	--wp--preset--box-shadow-input: 0 4px 8px 2px rgb(41 45 49 / 50%);
+	--wp--preset--box-shadow-generic: 0 4px 8px 2px rgb(41 45 49 / 10%);
+	--wp--preset--box-shadow-generic-interaction: 0 4px 8px 2px
+		rgb(41 45 49 / 25%);
+	--wp--preset--box-shadow-text-legibility: 0 4px 8px 2px rgb(29 29 29 / 25%);
+}

@@ -1,0 +1,147 @@
+/*
+Reset styles are based on the modern reset by Andy Bell.
+https://andy-bell.co.uk/a-modern-css-reset/
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body,
+figure,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/*
+The below code enables smooth scroll for everything except "find on page"
+It must have two separate keyframes even though they are the same due to
+a browser bug.
+@see https://schepp.dev/posts/smooth-scrolling-and-page-search/
+*/
+@keyframes smooth-scroll-1 {
+	from,
+	to {
+		scroll-behavior: smooth;
+	}
+}
+
+@keyframes smooth-scroll-2 {
+	from,
+	to {
+		scroll-behavior: smooth;
+	}
+}
+
+html {
+	animation: smooth-scroll-1 1s;
+}
+
+html:focus-within {
+	animation-name: smooth-scroll-2;
+	scroll-behavior: smooth;
+}
+
+/* end smooth scroll hack */
+
+body {
+	--body-min-height: calc(100vh - var(--wp-admin--admin-bar--height, 0px));
+	--body-max-width: 1920px;
+
+	box-shadow: 0 0 20px #eee;
+	margin: auto;
+
+	// Limit max width for fully aligned blocks.
+	max-width: var(--body-max-width);
+
+	// Ensure footer is at the bottom of the page.
+	min-height: var(--body-min-height);
+	overflow: auto;
+	overflow-wrap: anywhere;
+
+	// Prevent margin from spilling over
+	padding: 0.025px;
+	text-rendering: optimizespeed;
+	word-break: normal;
+}
+
+// Force footer to the bottom of the page.
+.site-blocks {
+	display: flex !important;
+	flex-direction: column;
+	gap: var(--wp--preset--spacing--0);
+	min-height: var(--body-min-height);
+}
+
+.site-blocks > .template-content {
+	flex-grow: 1;
+}
+
+.flow > * {
+	margin-block: var(--wp--style--block-gap) 0;
+}
+
+.flow > :first-child {
+	margin-block-start: 0;
+}
+
+// Remove margin between two blocks with backgrounds
+.has-background + .has-background {
+	margin-block-start: 0;
+}
+
+img,
+picture {
+	display: block;
+	max-width: 100%;
+}
+
+picture {
+	height: 100%;
+	width: 100%;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+
+	html:focus-within {
+		scroll-behavior: auto !important;
+	}
+}
+
+.wp-block-image img,
+.wp-block-post-featured-image img {
+	height: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	opacity: 1;
+}
+
+// Restore changes from Wordpress 6.6 to 6.7
+.wp-block-query-pagination > .wp-block-query-pagination-next,
+.wp-block-query-pagination > .wp-block-query-pagination-numbers,
+.wp-block-query-pagination > .wp-block-query-pagination-previous {
+	margin-bottom: 0.5em;
+	margin-right: 0.5em;
+}
+
+[hidden] {
+	display: none !important;
+}
+
+/* Enable container styles to the main container */
+main {
+	container-type: inline-size;
+}

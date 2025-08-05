@@ -1,0 +1,28 @@
+@use "breakpoints";
+@use "shared/mixins";
+
+// globals
+@use "partials/resets";
+@use "partials/typography";
+@use "partials/colours";
+@use "partials/variables";
+
+// WP Core and 3rd party blocks
+@use "partials/blocks/button";
+
+// Components
+@use "partials/components/chip";
+
+// Templates
+@use "partials/templates/archive";
+@use "partials/templates/search";
+@use "partials/templates/single";
+
+// Template parts
+@use "partials/parts/header";
+@use "partials/parts/footer";
+@use "partials/parts/post-card";
+@use "partials/parts/yoast-breadcrumbs";
+
+// Accessibility must always be last so nothing overrides it.
+@use "partials/accessibility";

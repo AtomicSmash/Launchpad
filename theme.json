@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
 	"version": 3,
 	"settings": {
 		"color": {
@@ -15,114 +15,54 @@
 			"text": true,
 			"palette": [
 				{
-					"slug": "bright-grey",
-					"name": "Bright Grey",
-					"color": "#ECECEC"
-				},
-				{
-					"slug": "dark-grey",
-					"name": "Dark Grey",
-					"color": "#BDBDBD"
-				},
-				{
-					"slug": "charcoal",
-					"name": "Charcoal",
-					"color": "#2B2B2B"
-				},
-				{
 					"slug": "primary",
 					"name": "Primary",
-					"color": "var(--wp--preset--color--bright-grey)"
+					"color": "#0066FF"
 				},
 				{
 					"slug": "secondary",
 					"name": "Secondary",
-					"color": "var(--wp--preset--color--dark-grey)"
+					"color": "var(--wp--preset--color--rich-black)"
 				},
 				{
-					"slug": "accent",
-					"name": "Accent",
-					"color": "var(--wp--preset--color--black)"
+					"slug": "paragraph-dark",
+					"name": "Paragraph dark",
+					"color": "#404040"
 				},
 				{
-					"slug": "accent-inverse",
-					"name": "Accent inverse",
-					"color": "var(--wp--preset--color--white)"
+					"slug": "paragraph-light",
+					"name": "Paragraph light",
+					"color": "#6A6A6A"
 				},
 				{
-					"slug": "text-base",
-					"name": "Text",
-					"color": "#2B2B2B"
+					"slug": "base",
+					"name": "base",
+					"color": "var(--wp--preset--color--rich-white)"
 				},
 				{
-					"slug": "headings",
-					"name": "Headings",
-					"color": "#2B2B2B"
+					"slug": "elevation-high",
+					"name": "Dark grey",
+					"color": "#DCDCDC"
 				},
 				{
-					"slug": "focus",
-					"name": "Focus",
-					"color": "var(--wp--preset--color--accent)"
+					"slug": "elevation-mid",
+					"name": "Mid grey",
+					"color": "#EFEFEF"
 				},
 				{
-					"slug": "links",
-					"name": "Links",
-					"color": "var(--wp--preset--color--accent)"
+					"slug": "elevation-low",
+					"name": "Light grey",
+					"color": "#F5F5F5"
 				},
 				{
-					"slug": "white",
-					"name": "White",
+					"slug": "rich-white",
+					"name": "Rich white",
 					"color": "rgb(255 255 255)"
 				},
 				{
-					"slug": "black",
-					"name": "Black",
+					"slug": "rich-black",
+					"name": "Rich black",
 					"color": "rgb(0 0 0)"
-				},
-				{
-					"slug": "success-dark",
-					"name": "Success (Dark)",
-					"color": "#166534"
-				},
-				{
-					"slug": "success-mid",
-					"name": "Success (Mid)",
-					"color": "#1d8644"
-				},
-				{
-					"slug": "success-light",
-					"name": "Success (Light)",
-					"color": "#e5f4e0"
-				},
-				{
-					"slug": "progress-dark",
-					"name": "Progress (Dark)",
-					"color": "#806a00"
-				},
-				{
-					"slug": "progress-mid",
-					"name": "Progress (Mid)",
-					"color": "#ecbe23"
-				},
-				{
-					"slug": "progress-light",
-					"name": "Progress (Light)",
-					"color": "#fdf9e6"
-				},
-				{
-					"slug": "error-dark",
-					"name": "Error (Dark)",
-					"color": "#9b0000"
-				},
-				{
-					"slug": "error-mid",
-					"name": "Error (Mid)",
-					"color": "#da2121"
-				},
-				{
-					"slug": "error-light",
-					"name": "Error (Light)",
-					"color": "#ffeaea"
 				}
 			]
 		},
@@ -130,57 +70,15 @@
 			"defaultFontSizes": false,
 			"customFontSize": false,
 			"dropCap": false,
-			"fontSizes": [
-				{
-					"name": "Heading 1",
-					"slug": "heading-1",
-					"size": "clamp(2.375rem, 2.037vw + 1.917rem, 3.75rem)"
-				},
-				{
-					"name": "Heading 2",
-					"slug": "heading-2",
-					"size": "clamp(1.75rem, 1.111vw + 1.5rem, 2.5rem)"
-				},
-				{
-					"name": "Heading 3",
-					"slug": "heading-3",
-					"size": "clamp(1.5rem, 0.741vw + 1.333rem, 2rem)"
-				},
-				{
-					"name": "Heading 4",
-					"slug": "heading-4",
-					"size": "clamp(1.375rem, 0.556vw + 1.25rem, 1.75rem)"
-				},
-				{
-					"name": "Heading 5",
-					"slug": "heading-5",
-					"size": "clamp(1.25rem, 0.185vw + 1.208rem, 1.375rem)"
-				},
-				{
-					"name": "Heading 6",
-					"slug": "heading-6",
-					"size": "clamp(1rem, 0.185vw + 0.958rem, 1.125rem)"
-				},
-				{
-					"name": "Body",
-					"slug": "body",
-					"size": "1rem",
-					"fluid": false
-				},
-				{
-					"name": "Small",
-					"slug": "small",
-					"size": "0.875rem",
-					"fluid": false
-				}
-			],
+			"fontSizes": [],
 			"fontFamilies": [],
-			"fontStyle": true,
-			"fontWeight": true,
+			"fontStyle": false,
+			"fontWeight": false,
 			"letterSpacing": false,
 			"textColumns": false,
 			"textDecoration": true,
-			"textTransform": true
+			"textTransform": true,
+			"lineHeight": false
 		},
 		"spacing": {
 			"defaultSpacingSizes": false,
@@ -188,62 +86,62 @@
 			"spacingSizes": [
 				{
 					"name": "0",
-					"size": "0rem",
+					"size": "clamp(0rem, 0.261vw + -0.061rem, 0.125rem)",
 					"slug": "0"
 				},
 				{
 					"name": "1",
-					"size": "0.5rem",
+					"size": "clamp(0.25rem, 0.523vw + 0.127rem, 0.5rem)",
 					"slug": "1"
 				},
 				{
 					"name": "2",
-					"size": "clamp(0.5rem, 0.976vw + 0.305rem, 1rem)",
+					"size": "clamp(0.375rem, 1.307vw + 0.069rem, 1rem)",
 					"slug": "2"
 				},
 				{
 					"name": "3",
-					"size": "clamp(1rem, 0.488vw + 0.902rem, 1.25rem)",
+					"size": "clamp(0.5rem, 1.569vw + 0.132rem, 1.25rem)",
 					"slug": "3"
 				},
 				{
 					"name": "4",
-					"size": "clamp(1.25rem, 0.488vw + 1.152rem, 1.5rem)",
+					"size": "clamp(0.75rem, 1.569vw + 0.382rem, 1.5rem)",
 					"slug": "4"
 				},
 				{
 					"name": "5",
-					"size": "clamp(1.25rem, 1.463vw + 0.957rem, 2rem)",
+					"size": "clamp(1rem, 2.092vw + 0.51rem, 2rem)",
 					"slug": "5"
 				},
 				{
 					"name": "6",
-					"size": "clamp(1.75rem, 1.463vw + 1.457rem, 2.5rem)",
+					"size": "clamp(1rem, 3.137vw + 0.265rem, 2.5rem)",
 					"slug": "6"
 				},
 				{
 					"name": "7",
-					"size": "clamp(2.5rem, 2.439vw + 2.012rem, 3.75rem)",
+					"size": "clamp(1.25rem, 5.229vw + 0.025rem, 3.75rem)",
 					"slug": "7"
 				},
 				{
 					"name": "8",
-					"size": "clamp(2.5rem, 2.927vw + 1.915rem, 4rem)",
+					"size": "clamp(2rem, 4.183vw + 1.02rem, 4rem)",
 					"slug": "8"
 				},
 				{
 					"name": "9",
-					"size": "clamp(3.75rem, 2.439vw + 3.262rem, 5rem)",
+					"size": "clamp(2rem, 6.275vw + 0.529rem, 5rem)",
 					"slug": "9"
 				},
 				{
 					"name": "10",
-					"size": "clamp(5rem, 1.951vw + 4.61rem, 6rem)",
+					"size": "clamp(2.75rem, 6.797vw + 1.157rem, 6rem)",
 					"slug": "10"
 				},
 				{
 					"name": "11",
-					"size": "clamp(5rem, 4.878vw + 4.024rem, 7.5rem)",
+					"size": "clamp(2.75rem, 9.935vw + 0.422rem, 7.5rem)",
 					"slug": "11"
 				}
 			],
@@ -252,16 +150,6 @@
 		"custom": {
 			"site-container-x-padding": "clamp(1rem, 1.818vw + 0.636rem, 2rem)",
 			"site-container-y-padding": "clamp(1rem, 1.818vw + 0.636rem, 2rem)",
-			"lineHeight": {
-				"heading-1": "clamp(3.088rem, 3.759vw + 2.242rem, 5.625rem)",
-				"heading-2": "clamp(2.275rem, 2.185vw + 1.783rem, 3.75rem)",
-				"heading-3": "clamp(1.95rem, 1.556vw + 1.6rem, 3rem)",
-				"heading-4": "clamp(1.788rem, 1.241vw + 1.508rem, 2.625rem)",
-				"heading-5": "clamp(1.625rem, 0.648vw + 1.479rem, 2.063rem)",
-				"heading-6": "clamp(1.3rem, 0.574vw + 1.171rem, 1.688rem)",
-				"body": "1.5",
-				"small": "1.5"
-			},
 			"z-index": {
 				"wp-admin-bar": "99,999 (REFERENCE)",
 				"lightbox-button": "50",
@@ -273,8 +161,9 @@
 			},
 			"radius": {
 				"none": "0",
+				"circle": "50%",
 				"full": "9999px",
-				"circle": "50%"
+				"rounded": "4px"
 			}
 		},
 		"layout": {
@@ -285,7 +174,23 @@
 		"useRootPaddingAwareAlignments": true,
 		"shadow": {
 			"defaultPresets": false,
-			"presets": []
+			"presets": [
+				{
+					"name": "Elevation 20",
+					"slug": "elevation-20",
+					"shadow": "4px 3px 7px -1px rgb(135 135 135 / 20%)"
+				},
+				{
+					"name": "Elevation 30",
+					"slug": "elevation-30",
+					"shadow": "6px 7px 7px -2px rgb(134 134 134 / 30%)"
+				},
+				{
+					"name": "Elevation 70",
+					"slug": "elevation-70",
+					"shadow": "6px 10px 22px -3px rgb(135 135 135 / 70%)"
+				}
+			]
 		}
 	},
 	"styles": {
@@ -297,11 +202,12 @@
 				"bottom": "var(--wp--custom--site-container-y-padding)",
 				"left": "var(--wp--custom--site-container-x-padding)"
 			}
-		}
+		},
+		"elements": {}
 	},
 	"templateParts": [
 		{
-			"area": "uncategorized",
+			"area": "header",
 			"name": "header",
 			"title": "Header"
 		},
@@ -309,6 +215,11 @@
 			"area": "uncategorized",
 			"name": "footer-logos",
 			"title": "Footer logos"
+		},
+		{
+			"area": "footer",
+			"name": "footer",
+			"title": "Footer"
 		},
 		{
 			"area": "uncategorized",

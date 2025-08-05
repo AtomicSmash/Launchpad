@@ -1,0 +1,208 @@
+@use "sass:string";
+@use "sass:math";
+@use "sass:map";
+@use "sass:meta";
+
+/* stylelint-disable at-rule-empty-line-before -- Shouldn't apply to scss if statements */
+/* stylelint-disable order/order -- Order of properties in functions matters */
+
+///
+/// Casts a string into a number
+///
+/// @param {String | Number} $value - Value to be parsed
+///
+/// @return {Number}
+///
+@function to-number($value) {
+	@if meta.type-of($value) == "number" {
+		@return $value;
+	} @else if meta.type-of($value) != "string" {
+		@error 'Value for `to-number` should be a number or a string.';
+	}
+
+	$result: 0;
+	$digits: 0;
+	$minus: string.slice($value, 1, 1) == "-";
+	$numbers: (
+		"0": 0,
+		"1": 1,
+		"2": 2,
+		"3": 3,
+		"4": 4,
+		"5": 5,
+		"6": 6,
+		"7": 7,
+		"8": 8,
+		"9": 9,
+	);
+
+	@for $i from if($minus, 2, 1) through string.length($value) {
+		$character: string.slice($value, $i, $i);
+
+		@if not(map.has-key($numbers, $character) or $character == ".") {
+			@return to-length(
+				if($minus, -$result, $result),
+				string.slice($value, $i)
+			);
+		}
+
+		@if $character == "." {
+			$digits: 1;
+		} @else if $digits == 0 {
+			$result: $result * 10 + map.get($numbers, $character);
+		} @else {
+			$digits: $digits * 10;
+			$result: $result + math.div(map.get($numbers, $character), $digits);
+		}
+	}
+
+	@return if($minus, -$result, $result);
+}
+
+///
+/// Add `$unit` to `$value`
+///
+/// @param {Number} $value - Value to add unit to
+/// @param {String} $unit - String representation of the unit
+///
+/// @return {Number} - `$value` expressed in `$unit`
+///
+@function add-unit($value, $unit) {
+	$units: (
+		"px": 1px,
+		"cm": 1cm,
+		"mm": 1mm,
+		"%": 1%,
+		"ch": 1ch,
+		"pc": 1pc,
+		"in": 1in,
+		"em": 1em,
+		"rem": 1rem,
+		"pt": 1pt,
+		"ex": 1ex,
+		"vw": 1vw,
+		"vh": 1vh,
+		"vmin": 1vmin,
+		"vmax": 1vmax,
+	);
+
+	@if not map.has-key($units, $unit) {
+		@error "Invalid unit `#{$unit}`.";
+	}
+
+	@return $value * map.get($units, $unit);
+}
+
+///
+/// Calculate fluid size of an element on a line
+/// Calculation taken from https://fluidtypography.com/
+///
+/// @param {String} $scale-from-size - The minimum value
+/// @param {String} $scale-to-size - The maximum value
+///
+/// @return - A clamp css function
+@function fluid-size($scale-from-size, $scale-to-size) {
+	@if math.unit($scale-from-size) == "px" {
+		$scale-from-size: to-number(string.slice("#{$scale-from-size}", 0, -3));
+	} @else if math.unit($scale-from-size) == "rem" {
+		$scale-from-size: to-number(string.slice("#{$scale-from-size}", 0, -4)) *
+			16;
+	} @else if $scale-from-size == 0 {
+		$scale-from-size: 0;
+	} @else {
+		@error "Unknown unit passed into fluid-size in min parameter: #{math.unit($scale-from-size)}. Please use px or rem.";
+	}
+
+	@if math.unit($scale-to-size) == "px" {
+		$scale-to-size: to-number(string.slice("#{$scale-to-size}", 0, -3));
+	} @else if math.unit($scale-to-size) == "rem" {
+		$scale-to-size: to-number(string.slice("#{$scale-to-size}", 0, -4)) * 16;
+	} @else if $scale-to-size == 0 {
+		$scale-to-size: 0;
+	} @else {
+		@error "Unknown unit passed into fluid-size in max parameter: #{math.unit($scale-to-size)}. Please use px or rem.";
+	}
+
+	$min-size: $scale-from-size;
+	$max-size: $scale-to-size;
+
+	@if $scale-from-size == $scale-to-size {
+		@return add-unit(math.div($scale-from-size, 16), "rem");
+	}
+
+	@if $scale-from-size > $scale-to-size {
+		$min-size: $scale-to-size;
+		$max-size: $scale-from-size;
+	}
+
+	$min-viewport-width: 375; // unitless px
+	$max-viewport-width: 1140; // unitless px
+
+	/* m = (y2 - y1) / (x2 - x1)  */
+	$rise: $scale-to-size - $scale-from-size;
+	$run: $max-viewport-width - $min-viewport-width;
+	$slope: math.div($rise, $run);
+
+	@return clamp(
+		add-unit(math.div($min-size, 16), "rem"),
+		calc(
+			$slope * (100vw - add-unit(math.div($min-viewport-width, 16), "rem")) +
+				add-unit(math.div($scale-from-size, 16), "rem")
+		),
+		add-unit(math.div($max-size, 16), "rem")
+	);
+}
+
+@mixin typography-style-t-1 {
+	font-size: fluid-size(32px, 64px);
+	line-height: fluid-size(44px, 76px);
+	letter-spacing: fluid-size(-1px, -2px);
+	font-weight: var(--heading-font-weight);
+}
+
+@mixin typography-style-t-2 {
+	font-size: fluid-size(28px, 48px);
+	line-height: fluid-size(40px, 60px);
+	letter-spacing: fluid-size(-0.5px, -1.5px);
+	font-weight: var(--heading-font-weight);
+}
+
+@mixin typography-style-t-3 {
+	font-size: fluid-size(22px, 32px);
+	line-height: fluid-size(32px, 44px);
+	letter-spacing: fluid-size(-0.25px, -1px);
+	font-weight: var(--heading-font-weight);
+}
+
+@mixin typography-style-t-4 {
+	font-size: fluid-size(20px, 28px);
+	line-height: fluid-size(28px, 40px);
+	letter-spacing: fluid-size(0, -0.5px);
+	font-weight: var(--heading-font-weight);
+}
+
+@mixin typography-style-t-5 {
+	font-size: fluid-size(20px, 22px);
+	line-height: fluid-size(28px, 32px);
+	letter-spacing: fluid-size(0, -0.25px);
+	font-weight: var(--heading-font-weight);
+}
+
+@mixin typography-style-t-6 {
+	font-size: fluid-size(16px, 18px);
+	line-height: fluid-size(24px, 28px);
+	letter-spacing: 0;
+	font-weight: var(--heading-font-weight);
+}
+
+@mixin typography-style-body {
+	font-size: fluid-size(16px, 16px);
+	line-height: fluid-size(24px, 24px);
+	letter-spacing: 0;
+}
+
+@mixin typography-style-body-large {
+	font-size: fluid-size(16px, 22px);
+	line-height: fluid-size(24px, 28px);
+	letter-spacing: 0;
+}

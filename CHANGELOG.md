@@ -1,5 +1,45 @@
 # @atomicsmash/launchpad
 
+## 1.0.0-beta.29
+
+### Major Changes
+
+- 94ddb83: Refactor footer template part
+- c7a9cad: split out other variables into variables.scss
+- c7a9cad: refactor typography into mixins and add mixins helper
+- 8d55a1f: Remove old FSE parts
+- 396b084: Switch to the new compiler
+- c7a9cad: update variables in block test fixtures and attributes
+- c7a9cad: setup base variables for colours, spacing and typography
+- c7a9cad: remove typography font sizes from theme.json in aid of block styles
+- c7a9cad: Add block styles for headings and paragraphs
+
+### Minor Changes
+
+- 989f635: Add post card template part and update archive template to use it
+- 989f635: Add single template
+- f4777b3: update blocks-helpers to v7
+- 982e7fa: Add gravity forms default styling
+- c77dd3e: Enable container styles to the main container
+- 9e8a2d1: Update button variables and remove uneeded css
+- 7ee4a9a: Update WordPress version
+- 989f635: Add chip component
+- 989f635: Adding the get primary term
+- 9e8a2d1: Add missing variables for font family, headings, body and colours
+- ec1c154: Add CSS to remove margin between blocks with backgrounds
+- e77704c: Allow show/hide of author using apply filters function
+- 9620852: Added transparent header option
+
+### Patch Changes
+
+- b2c9d7d: Fix edge case error with get_featured_image
+- 018cf7e: Update coding standards and fix linting errors
+- 1cc1dbd: Update deps
+- 62351c9: Add padding to site blocks if using transparent header
+- 018cf7e: Update dependencies
+- b305642: Update chip component to return string
+- 810b4fe: fix theme update function arg type
+
 ## 1.0.0-beta.28
 
 ### Minor Changes
@@ -150,7 +190,6 @@
 ### Patch Changes
 
 - de4aa26: Minor Launchpad fixes
-
   1. Adds text based resets like inheriting font styles for elements
   2. Add blog home template
   3. Add default padding to CTA pattern

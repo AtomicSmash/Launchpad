@@ -1,0 +1,49 @@
+.site-header {
+	--header-y-padding: var(--wp--preset--spacing--4);
+
+	/* Set header padding */
+	padding-block: var(--header-y-padding);
+
+	/* Make menu stick to the top when you scroll down */
+	position: sticky;
+	top: var(--wp-admin--admin-bar--height, 0);
+	background-color: var(--wp--preset--color--rich-white);
+	z-index: var(--wp--custom--z-index--site-header);
+
+	.wp-block-site-logo {
+		flex: 0 0 auto;
+	}
+}
+
+.site-blocks:has(.transparent-header) {
+	padding-block-start: var(--header-height);
+}
+
+header:has(.transparent-header) {
+	margin-top: calc(-1 * var(--header-height, 0px));
+	transition: background 0.4s ease-in-out;
+	background: none;
+
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		pointer-events: none;
+		background: linear-gradient(
+			to bottom,
+			rgb(0 0 0 / 60%) 0%,
+			transparent 100%
+		);
+		opacity: 1;
+		transition: opacity 0.4s ease-in-out;
+	}
+
+	&[data-is-scrolled="true"] {
+		background: var(--wp--preset--color--white);
+	}
+
+	&[data-is-scrolled="true"]::before {
+		opacity: 0;
+	}
+}

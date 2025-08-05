@@ -4,8 +4,45 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f5e24117f038ff04b856c264e76e1689",
+    "content-hash": "713c7a5e92a7bdbee67728483bdf8fb6",
     "packages": [
+        {
+            "name": "atomicsmash/compiler-helpers",
+            "version": "v0.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AtomicSmash/compiler-helpers.git",
+                "reference": "1fb6bbb1408e18840fd791a8cfe29e5d09827875"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AtomicSmash/compiler-helpers/zipball/1fb6bbb1408e18840fd791a8cfe29e5d09827875",
+                "reference": "1fb6bbb1408e18840fd791a8cfe29e5d09827875",
+                "shasum": ""
+            },
+            "require-dev": {
+                "atomicsmash/php-coding-standards": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AtomicSmash\\CompilerHelpers\\": "classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Atomic Smash",
+                    "email": "mail@atomicsmash.co.uk",
+                    "homepage": "https://www.atomicsmash.co.uk"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/AtomicSmash/compiler-helpers/issues",
+                "source": "https://github.com/AtomicSmash/compiler-helpers/tree/v0.1.2"
+            },
+            "time": "2025-04-15T14:40:49+00:00"
+        },
         {
             "name": "johnbillion/args",
             "version": "1.10.0",
@@ -191,10 +228,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }

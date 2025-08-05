@@ -1,0 +1,103 @@
+@use "../shared/mixins";
+
+/* Prevent font size inflation */
+html {
+	text-size-adjust: none;
+}
+
+body {
+	font-family: var(--Typography-Font-families-body);
+	font-size: var(--Typography-Font-size-body);
+	color: var(--wp--preset--color--rich-black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--wp--preset--color--headings);
+}
+
+/* Prevent browsers from setting their own font sizes for our elements */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+:where(button.reset) {
+	background-color: transparent;
+	color: inherit;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+:where(a[href]:not(.wp-element-button, .as-button, .as-breadcrumbs__link)) {
+	color: var(--wp--preset--color--hyperlink);
+	text-decoration: underline;
+	outline-offset: 2px;
+	border-radius: var(--wp--custom--radius--rounded);
+
+	&:hover {
+		text-decoration: none;
+		color: var(--wp--preset--color--hyperlink-hover);
+	}
+}
+
+.is-style-t-1,
+h1.is-style-default,
+h1:not([class^="is-style"], [class*=" is-style"]),
+.has-t-1-font-size {
+	@include mixins.typography-style-t-1;
+}
+
+.is-style-t-2,
+h2.is-style-default,
+h2:not([class^="is-style"], [class*=" is-style"]),
+.has-t-2-font-size {
+	@include mixins.typography-style-t-2;
+}
+
+.is-style-t-3,
+h3.is-style-default,
+h3:not([class^="is-style"], [class*=" is-style"]),
+.has-t-3-font-size {
+	@include mixins.typography-style-t-3;
+}
+
+.is-style-t-4,
+h4.is-style-default,
+h4:not([class^="is-style"], [class*=" is-style"]),
+.has-t-4-font-size {
+	@include mixins.typography-style-t-4;
+}
+
+.is-style-t-5,
+h5.is-style-default,
+h5:not([class^="is-style"], [class*=" is-style"]),
+.has-t-5-font-size {
+	@include mixins.typography-style-t-5;
+}
+
+.is-style-t-6,
+h6.is-style-default,
+h6:not([class^="is-style"], [class*=" is-style"]),
+.has-t-6-font-size {
+	@include mixins.typography-style-t-6;
+}
+
+.is-style-body,
+p.is-style-default,
+.has-body-font-size {
+	@include mixins.typography-style-body;
+}
+
+.is-style-body-large,
+p.is-style-body-large,
+.has-body-large-font-size {
+	@include mixins.typography-style-body-large;
+}

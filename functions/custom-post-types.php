@@ -8,7 +8,7 @@ namespace Launchpad\PostTypes;
 /**
  * Add custom post types.
  */
-function register_post_types() {
+function register_post_types(): void {
 	\register_extended_post_type(
 		'global-banner',
 		array(

@@ -1,0 +1,203 @@
+@use "sass:color";
+
+/** Theme variables
+--form-input-background-colour(--invalid)
+--form-input-border-colour(--invalid)
+--form-input-text-colour
+--form-input-accent-colour
+--form-input-accent-text-colour
+--form-label-colour
+--form-sub-label-colour
+--form-input-placeholder-text-colour
+--form-input-required-text-colour
+--form-input-padding
+*/
+
+/** Common form elements **/
+%inputs-container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: var(--wp--style--block-gap) 1em;
+}
+
+@for $i from 1 through 12 {
+	%column-#{$i}-12 {
+		grid-column: span #{$i};
+	}
+}
+
+%label {
+	display: block;
+	margin-block-end: 0.25em;
+	color: var(--form-label-colour, inherit);
+}
+
+%sub-label {
+	margin-block-start: 0.25em;
+	color: var(--form-sub-label-colour, inherit);
+	display: block;
+}
+
+%single-line-input {
+	--form-input-padding: 1em;
+
+	width: 100%;
+	background-color: var(--form-input-background-colour, #fbfbfb);
+	border: 0.125em solid var(--form-input-border-colour, #e0e0e0);
+	padding: var(--form-input-padding);
+	border-radius: 0.25em;
+	font-size: 1em;
+	line-height: 1.5;
+	color: var(--form-input-text-colour, #000);
+}
+
+%invalid {
+	background-color: var(--form-input-background-colour--invalid, #f8e4e6);
+	border-color: var(--form-input-border-colour--invalid, #dc2626);
+}
+
+%success {
+	background-color: var(--form-input-background-colour--success, #d7f9de);
+	border-color: var(--form-input-border-colour--success, #1d8644);
+}
+
+%multiple-line-input {
+	@extend %single-line-input;
+}
+
+%form-button {
+	background-color: var(
+		--form-input-accent-colour,
+		var(--wp--preset--color--accent, #000)
+	);
+	color: var(
+		--form-input-accent-text-colour,
+		var(--wp--preset--color--accent-text, #fff)
+	);
+	border: none;
+	font-weight: 700;
+	border-radius: 0.25em;
+	padding: 1em;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+	cursor: pointer;
+	min-width: 13.75em;
+
+	@media (--mobile) {
+		width: 100%;
+	}
+
+	&:hover,
+	&:focus-visible {
+		filter: brightness(110%);
+		text-decoration: underline;
+	}
+}
+
+%checkbox-radio-group {
+	list-style: none;
+	padding-inline-start: 1em;
+}
+
+%checkbox-radio-group-single-input-and-label {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.25em;
+}
+
+%checkbox-radio-group-single-input {
+	margin-inline: 0 1em;
+	margin-block: 0.25em;
+	width: 1em;
+	height: auto;
+	aspect-ratio: 1;
+	accent-color: var(
+		--form-input-accent-colour,
+		var(--wp--preset--color--accent, #000)
+	);
+	flex: 0 0 1.5em;
+}
+
+%select-input-wrapper {
+	position: relative;
+}
+
+%select-input {
+	@extend %single-line-input;
+
+	appearance: none;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='currentcolor'%3E%3Cpath d='m24 30.8-12-12 2.15-2.15L24 26.5l9.85-9.85L36 18.8Z'/%3E%3C/svg%3E%0A");
+	background-position: center right 0.75em;
+	background-size: 1.5em;
+	background-repeat: no-repeat;
+	padding-right: calc(var(--form-input-padding) + 2em);
+}
+
+%number-input {
+	@extend %single-line-input;
+
+	min-width: 5em;
+}
+
+%file-input {
+	@extend %single-line-input;
+}
+
+%placeholder {
+	color: var(--form-input-placeholder-text-colour, #585e6a);
+}
+
+%required {
+	color: var(--form-input-required-text-colour, #dc2626);
+	margin-inline-start: 0.25em;
+}
+
+%required-asterisk {
+	@extend %required;
+
+	font-weight: 700;
+	font-size: 1em;
+}
+
+%required-text {
+	@extend %required;
+
+	font-size: 0.75em;
+}
+
+%error-message {
+	background-color: #dc2626;
+	color: #fbfbfb;
+	padding-block: 1em;
+	padding-inline: 1em;
+	border-radius: 0.25em;
+
+	&::before {
+		content: "";
+		background: var(--wp--preset--color--white)
+			url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.0625 3.0625L13 13' stroke='%23dc2626' stroke-linecap='round'/%3E%3Cpath d='M13 3.0625L3.06248 13' stroke='%23dc2626' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+			center / 65% no-repeat;
+		display: block;
+		width: 1.5em;
+		height: auto;
+		aspect-ratio: 1;
+		margin-inline-end: 0.5em;
+		border-radius: 50%;
+		float: left;
+		margin-block-start: -0.25em;
+	}
+}
+
+%fieldset {
+	border: none;
+	padding: 0;
+	margin-inline: 0;
+
+	legend {
+		@extend %label;
+
+		padding: 0;
+		margin-inline: 0;
+	}
+}

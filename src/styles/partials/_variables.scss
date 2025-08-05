@@ -1,0 +1,59 @@
+// For additional variables that don't fit into the other categories
+// Disclaimer: Only set variables in here
+
+:root {
+	--heading-font-weight: 700;
+
+	// Extend typography
+	--Typography-Font-families-body: arial, helvetica, sans-serif, system-ui;
+	--Typography-t-1-font-size: fluid-size(32px, 64px);
+	--Typography-t-1-line-height: fluid-size(44px, 76px);
+	--Typography-t-1-letter-spacing: fluid-size(-1px, -2px);
+	--Typography-t-1-font-weight: var(--heading-font-weight);
+	--Typography-t-2-font-size: fluid-size(28px, 48px);
+	--Typography-t-2-line-height: fluid-size(40px, 60px);
+	--Typography-t-2-letter-spacing: fluid-size(-0.5px, -1.5px);
+	--Typography-t-2-font-weight: var(--heading-font-weight);
+	--Typography-t-3-font-size: fluid-size(22px, 32px);
+	--Typography-t-3-line-height: fluid-size(32px, 44px);
+	--Typography-t-3-letter-spacing: fluid-size(-0.25px, -1px);
+	--Typography-t-3-font-weight: var(--heading-font-weight);
+	--Typography-t-4-font-size: fluid-size(20px, 28px);
+	--Typography-t-4-line-height: fluid-size(28px, 40px);
+	--Typography-t-4-letter-spacing: fluid-size(0, -0.5px);
+	--Typography-t-4-font-weight: var(--heading-font-weight);
+	--Typography-t-5-font-size: fluid-size(20px, 22px);
+	--Typography-t-5-line-height: fluid-size(28px, 32px);
+	--Typography-t-5-letter-spacing: fluid-size(0, -0.25px);
+	--Typography-t-5-font-weight: var(--heading-font-weight);
+	--Typography-t-6-font-size: fluid-size(16px, 18px);
+	--Typography-t-6-line-height: fluid-size(24px, 28px);
+	--Typography-t-6-letter-spacing: 0;
+	--Typography-t-6-font-weight: var(--heading-font-weight);
+	--Typography-Body-font-size: fluid-size(16px, 16px);
+	--Typography-Body-line-height: fluid-size(24px, 24px);
+	--Typography-Body-letter-spacing: 0;
+	--Typography-Body-large-font-size: fluid-size(16px, 22px);
+	--Typography-Body-large-line-height: fluid-size(24px, 28px);
+	--Typography-Body-large-letter-spacing: 0;
+	--Typography-Button-font-size: fluid-size(16px, 16px);
+	--Typography-Button-line-height: fluid-size(24px, 24px);
+	--Typography-Button-letter-spacing: 0;
+	--Typography-Button-font-weight: var(--heading-font-weight);
+	--Typography-Eyebrow-font-size: 12px;
+	--Typography-Eyebrow-line-height: 16px;
+	--Typography-Eyebrow-letter-spacing: 4px;
+
+	// Extended container sizes
+	--wp--style--global--narrow-size: calc(
+			56rem - (var(--wp--custom--site-container-x-padding) * 2)
+		): --wp--style--global--narrowest-size: calc(
+			44rem - (var(--wp--custom--site-container-x-padding) * 2)
+		);
+	--wp--style--global--aside-size: calc(
+		18rem - (var(--wp--custom--site-container-x-padding) * 2)
+	);
+
+	// Spacing
+	--wp--preset--spacing--aside-article-gap: var(--wp--preset--spacing--11);
+}

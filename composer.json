@@ -8,6 +8,7 @@
 		}
 	},
 	"require": {
-		"johnbillion/extended-cpts": "*"
+		"johnbillion/extended-cpts": "*",
+		"atomicsmash/compiler-helpers": "^0.1.2"
 	}
 }

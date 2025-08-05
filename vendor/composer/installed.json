@@ -1,6 +1,46 @@
 {
     "packages": [
         {
+            "name": "atomicsmash/compiler-helpers",
+            "version": "v0.1.2",
+            "version_normalized": "0.1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AtomicSmash/compiler-helpers.git",
+                "reference": "1fb6bbb1408e18840fd791a8cfe29e5d09827875"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AtomicSmash/compiler-helpers/zipball/1fb6bbb1408e18840fd791a8cfe29e5d09827875",
+                "reference": "1fb6bbb1408e18840fd791a8cfe29e5d09827875",
+                "shasum": ""
+            },
+            "require-dev": {
+                "atomicsmash/php-coding-standards": "^1.0"
+            },
+            "time": "2025-04-15T14:40:49+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "AtomicSmash\\CompilerHelpers\\": "classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Atomic Smash",
+                    "email": "mail@atomicsmash.co.uk",
+                    "homepage": "https://www.atomicsmash.co.uk"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/AtomicSmash/compiler-helpers/issues",
+                "source": "https://github.com/AtomicSmash/compiler-helpers/tree/v0.1.2"
+            },
+            "install-path": "../atomicsmash/compiler-helpers"
+        },
+        {
             "name": "johnbillion/args",
             "version": "1.10.0",
             "version_normalized": "1.10.0.0",

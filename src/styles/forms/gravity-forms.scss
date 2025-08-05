@@ -1,0 +1,446 @@
+@use "./common";
+
+:where(.gform_wrapper) {
+	.gform_fields {
+		@extend %inputs-container;
+	}
+
+	.gform-grid-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--wp--style--block-gap) 1em;
+	}
+
+	.gform-grid-col--size-auto {
+		flex: 1 0 auto;
+	}
+
+	.gform-field-label {
+		@extend %label;
+	}
+
+	.gfield_description {
+		@extend %sub-label;
+	}
+
+	.gfield_required_asterisk {
+		@extend %required-asterisk;
+	}
+
+	.gfield_required_text {
+		@extend %required-text;
+	}
+
+	::placeholder {
+		@extend %placeholder;
+	}
+
+	.gfield.gfield--type-text {
+		input {
+			@extend %single-line-input;
+		}
+
+		&.gfield_error input {
+			@extend %invalid;
+		}
+	}
+
+	.gfield.gfield--type-textarea {
+		.textarea {
+			@extend %multiple-line-input;
+		}
+
+		&.gfield_error .textarea {
+			@extend %invalid;
+		}
+	}
+
+	.gfield.gfield--type-select {
+		@extend %select-input-wrapper;
+
+		.gfield_select {
+			@extend %select-input;
+		}
+
+		&.gfield_error .gfield_select {
+			@extend %invalid;
+		}
+	}
+
+	.gfield.gfield--type-number {
+		input {
+			@extend %number-input;
+		}
+
+		&.gfield_error input {
+			@extend %invalid;
+		}
+	}
+
+	.gfield.gfield--type-radio,
+	.gfield.gfield--type-checkbox,
+	.gfield.gfield--type-date,
+	.gfield.gfield--type-time,
+	.gfield.gfield--type-list,
+	.gfield.gfield--type-consent,
+	.gfield.gfield--type-name,
+	.gfield.gfield--type-email,
+	.gfield.gfield--type-address,
+	.gfield.gfield--type-multi_choice,
+	.gfield.gfield--type-image_choice {
+		@extend %fieldset;
+	}
+
+	.gfield.gfield--type-radio,
+	.gfield.gfield--type-checkbox {
+		.gfield_radio,
+		.gfield_checkbox {
+			@extend %checkbox-radio-group;
+		}
+
+		&.gfield_error {
+			.gfield_radio,
+			.gfield_checkbox {
+				@extend %invalid;
+			}
+		}
+
+		.gchoice {
+			@extend %checkbox-radio-group-single-input-and-label;
+		}
+
+		input {
+			@extend %checkbox-radio-group-single-input;
+		}
+	}
+
+	.gfield.gfield--type-date,
+	.gfield.gfield--type-time {
+		.gfield_date_dropdown_day,
+		.gfield_date_dropdown_month,
+		.gfield_date_dropdown_year,
+		.gfield_time_ampm {
+			@extend %select-input-wrapper;
+		}
+
+		select {
+			@extend %select-input;
+		}
+
+		&.gfield_error select {
+			@extend %invalid;
+		}
+
+		.hour_minute_colon {
+			margin-top: 1.25em;
+		}
+	}
+
+	.gfield.gfield--type-time {
+		input {
+			@extend %number-input;
+		}
+
+		&.gfield_error input {
+			@extend %invalid;
+		}
+	}
+
+	.gfield.gfield--type-fileupload {
+		.gfield_validation_message:empty {
+			display: none;
+		}
+
+		input {
+			@extend %file-input;
+		}
+
+		&.gfield_error input {
+			@extend %invalid;
+		}
+	}
+
+	.gfield.gfield--type-consent {
+		@extend %checkbox-radio-group;
+
+		.ginput_container_consent {
+			@extend %checkbox-radio-group-single-input-and-label;
+		}
+
+		&.gfield_error .ginput_container_consent {
+			@extend %invalid;
+		}
+
+		input {
+			@extend %checkbox-radio-group-single-input;
+		}
+	}
+
+	.gfield.gfield--type-list {
+		.gfield_list_groups {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 1em;
+		}
+
+		.gfield_list_group {
+			display: flex;
+			gap: 1em;
+		}
+
+		.gfield_list_cell {
+			flex: 1;
+		}
+
+		.gfield_list_icons {
+			display: flex;
+			align-items: center;
+			gap: 0.5em;
+
+			.add_list_item,
+			.delete_list_item {
+				border-radius: 1em;
+				background-color: var(
+					--form-input-accent-colour,
+					var(--wp--preset--color--accent, #000)
+				);
+				color: var(
+					--form-input-accent-text-colour,
+					var(--wp--preset--color--accent-text, #fff)
+				);
+				border: none;
+				font-weight: 700;
+				font-family: inherit;
+				font-size: inherit;
+				line-height: inherit;
+				cursor: pointer;
+				padding: 0.5em 1em;
+			}
+		}
+
+		.gfield_list_group:only-child .delete_list_item {
+			display: none;
+		}
+
+		input {
+			@extend %single-line-input;
+		}
+
+		&.gfield_error input {
+			@extend %invalid;
+		}
+	}
+
+	.gfield.gfield--type-email {
+		input {
+			@extend %single-line-input;
+		}
+
+		&.gfield_error input {
+			@extend %invalid;
+		}
+	}
+
+	.gfield.gfield--type-phone {
+		input {
+			@extend %single-line-input;
+		}
+
+		&.gfield_error input {
+			@extend %invalid;
+		}
+	}
+
+	// Fieldset here is the difference between the email & confirm email field group and the single email input.
+	fieldset.gfield.gfield--type-email {
+		.ginput_container_email {
+			@extend %inputs-container;
+		}
+
+		.gform-grid-col {
+			@extend %column-6-12;
+		}
+	}
+
+	.gfield.gfield--type-name {
+		input {
+			@extend %single-line-input;
+		}
+
+		select {
+			@extend %select-input;
+		}
+
+		&.gfield_error input,
+		&.gfield_error select {
+			@extend %invalid;
+		}
+	}
+
+	.gfield.gfield--type-website {
+		input {
+			@extend %single-line-input;
+		}
+
+		&.gfield_error input {
+			@extend %invalid;
+		}
+	}
+
+	.gfield.gfield--type-address {
+		.ginput_container {
+			@extend %inputs-container;
+		}
+
+		.ginput_full {
+			@extend %column-12-12;
+		}
+
+		.ginput_left,
+		.ginput_right {
+			@extend %column-6-12;
+		}
+
+		input {
+			@extend %single-line-input;
+		}
+
+		select {
+			@extend %select-input;
+		}
+
+		&.gfield_error input,
+		&.gfield_error select {
+			@extend %invalid;
+		}
+	}
+
+	.gfield--type-multi_choice {
+		.gfield_radio {
+			@extend %checkbox-radio-group;
+		}
+
+		&.gfield_error .gfield_radio {
+			@extend %invalid;
+		}
+
+		.gchoice {
+			@extend %checkbox-radio-group-single-input-and-label;
+		}
+
+		input {
+			@extend %checkbox-radio-group-single-input;
+		}
+	}
+
+	.gfield.gfield--type-multiselect {
+		select {
+			@extend %multiple-line-input;
+
+			overflow: auto;
+		}
+
+		&.gfield_error select {
+			@extend %invalid;
+		}
+	}
+
+	.gfield.gfield--width-quarter {
+		@extend %column-3-12;
+	}
+
+	.gfield.gfield--width-third {
+		@extend %column-4-12;
+	}
+
+	.gfield.gfield--width-five-twelfths {
+		@extend %column-5-12;
+	}
+
+	.gfield.gfield--width-half {
+		@extend %column-6-12;
+	}
+
+	.gfield.gfield--width-seven-twelfths {
+		@extend %column-7-12;
+	}
+
+	.gfield.gfield--width-two-thirds {
+		@extend %column-8-12;
+	}
+
+	.gfield.gfield--width-three-quarter {
+		@extend %column-9-12;
+	}
+
+	.gfield.gfield--width-five-sixths {
+		@extend %column-10-12;
+	}
+
+	.gfield.gfield--width-eleven-twelfths {
+		@extend %column-11-12;
+	}
+
+	.gfield:not(
+		.gfield--width-quarter,
+		.gfield--width-third,
+		.gfield--width-five-twelfths,
+		.gfield.gfield--width-half,
+		.gfield--width-seven-twelfths,
+		.gfield--width-two-thirds,
+		.gfield--width-three-quarter,
+		.gfield--width-five-sixths,
+		.gfield--width-eleven-twelfths
+	) {
+		@extend %column-12-12;
+	}
+
+	.gfield input.medium {
+		width: 50%;
+	}
+
+	.gfield input.small {
+		width: 25%;
+	}
+
+	.gfield--type-honeypot {
+		display: none;
+	}
+
+	.gform_button {
+		@extend %form-button;
+	}
+
+	.gform-footer {
+		margin-block-start: var(--wp--style--block-gap);
+	}
+
+	.gform_validation_errors,
+	.gfield_validation_message {
+		@extend %error-message;
+	}
+
+	.gform_validation_error_link {
+		color: inherit;
+	}
+
+	.gform_validation_errors {
+		font-size: 1.5em;
+
+		.gform_submission_error {
+			font-size: 1em;
+			line-height: 1.2;
+			margin-block: 0;
+			color: inherit;
+
+			.gform-icon--circle-error {
+				display: none;
+			}
+		}
+
+		ol {
+			margin-block-end: 0;
+			font-size: 0.75em;
+		}
+	}
+}
