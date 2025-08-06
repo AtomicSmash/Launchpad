@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 1.0.1
+
+### Patch Changes
+
+- cc7a3a4: Disable mailtrap if constants not set instead of erroring.
+
 ## 1.0.0
 
 ### Major Changes
