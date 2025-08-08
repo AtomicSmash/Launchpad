@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 1.1.0
+
+### Minor Changes
+
+- 06cf033: Refactor variables to make them easier to set and more applicable to the styles
+
 ## 1.0.1
 
 ### Patch Changes

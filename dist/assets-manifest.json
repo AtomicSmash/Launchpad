@@ -6,8 +6,9 @@
   "scripts/svgs.editor.tsx": "js/svgs.editor.769b833a23707aefda3e.js",
   "scripts/svgs.tsx": "js/svgs.5b07a66d9296ea5785a1.js",
   "scripts/transparentHeader.ts": "js/transparentHeader.9cec55045d30e3054fa8.js",
-  "styles/editor-content.scss": "css/editor-content.3362509d7b2fd32ff4ba.css",
+  "styles/colours.scss": "css/colours.62d520708c5b7121eb72.css",
+  "styles/editor-content.scss": "css/editor-content.bddc598af9320eca8921.css",
   "styles/editor-controls.scss": "css/editor-controls.83bbf8778d11aebc344a.css",
-  "styles/forms/gravity-forms.scss": "css/forms/gravity-forms.d99f7707f4690d865031.css",
-  "styles/styles.scss": "css/styles.f5e06b7c685c55e05533.css"
+  "styles/forms/gravity-forms.scss": "css/forms/gravity-forms.2a80dfc3201906f9f626.css",
+  "styles/styles.scss": "css/styles.93eee2cb84f847b0b339.css"
 }

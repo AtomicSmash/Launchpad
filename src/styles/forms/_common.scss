@@ -10,6 +10,8 @@
 --form-sub-label-colour
 --form-input-placeholder-text-colour
 --form-input-required-text-colour
+--form-error-background-colour
+--form-error-text-colour
 --form-input-padding
 */
 
@@ -72,7 +74,7 @@
 	);
 	color: var(
 		--form-input-accent-text-colour,
-		var(--wp--preset--color--accent-text, #fff)
+		var(--wp--preset--color--accent--text-colour, #fff)
 	);
 	border: none;
 	font-weight: 700;
@@ -167,16 +169,16 @@
 }
 
 %error-message {
-	background-color: #dc2626;
-	color: #fbfbfb;
+	background-color: var(--form-error-background-colour, #dc2626);
+	color: var(--form-error-text-colour, #fbfbfb);
 	padding-block: 1em;
 	padding-inline: 1em;
 	border-radius: 0.25em;
 
 	&::before {
 		content: "";
-		background: var(--wp--preset--color--white)
-			url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.0625 3.0625L13 13' stroke='%23dc2626' stroke-linecap='round'/%3E%3Cpath d='M13 3.0625L3.06248 13' stroke='%23dc2626' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+		background: var(--form-error-text-colour, #fbfbfb)
+			url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.0625 3.0625L13 13' style='stroke: var(--form-error-background-colour, %23dc2626);' stroke-linecap='round'/%3E%3Cpath d='M13 3.0625L3.06248 13' style='stroke: var(--form-error-background-colour, %23dc2626);' stroke-linecap='round'/%3E%3C/svg%3E%0A")
 			center / 65% no-repeat;
 		display: block;
 		width: 1.5em;

@@ -6,18 +6,9 @@ html {
 }
 
 body {
-	font-family: var(--Typography-Font-families-body);
-	font-size: var(--Typography-Font-size-body);
-	color: var(--wp--preset--color--rich-black);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: var(--wp--preset--color--headings);
+	font-family: var(--typography-font-families-body);
+	font-size: var(--typography-body-font-size);
+	color: var(--wp--preset--color--text-colour);
 }
 
 /* Prevent browsers from setting their own font sizes for our elements */

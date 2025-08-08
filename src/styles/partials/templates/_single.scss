@@ -50,7 +50,7 @@
 
 		@media (--mobile), (--tablet) {
 			padding: 1.25rem 0.75rem;
-			background: var(--wp--preset--color--elevation-mid);
+			background: var(--wp--preset--color--post-header-background);
 		}
 
 		@media (--desktop), (--ultra-wide) {
@@ -61,7 +61,7 @@
 
 	&__background {
 		display: none;
-		background: var(--wp--preset--color--elevation-mid);
+		background: var(--wp--preset--color--post-header-background);
 
 		@media (--desktop), (--ultra-wide) {
 			display: block;

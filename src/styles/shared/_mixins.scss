@@ -154,55 +154,67 @@
 }
 
 @mixin typography-style-t-1 {
-	font-size: fluid-size(32px, 64px);
-	line-height: fluid-size(44px, 76px);
-	letter-spacing: fluid-size(-1px, -2px);
-	font-weight: var(--heading-font-weight);
+	font-size: var(--typography-t-1-font-size);
+	line-height: var(--typography-t-1-line-height);
+	letter-spacing: var(--typography-t-1-letter-spacing);
+	font-weight: var(--typography-t-1-font-weight);
+	color: var(--typography-t-1-colour);
 }
 
 @mixin typography-style-t-2 {
-	font-size: fluid-size(28px, 48px);
-	line-height: fluid-size(40px, 60px);
-	letter-spacing: fluid-size(-0.5px, -1.5px);
-	font-weight: var(--heading-font-weight);
+	font-size: var(--typography-t-2-font-size);
+	line-height: var(--typography-t-2-line-height);
+	letter-spacing: var(--typography-t-2-letter-spacing);
+	font-weight: var(--typography-t-2-font-weight);
+	color: var(--typography-t-2-colour);
 }
 
 @mixin typography-style-t-3 {
-	font-size: fluid-size(22px, 32px);
-	line-height: fluid-size(32px, 44px);
-	letter-spacing: fluid-size(-0.25px, -1px);
-	font-weight: var(--heading-font-weight);
+	font-size: var(--typography-t-3-font-size);
+	line-height: var(--typography-t-3-line-height);
+	letter-spacing: var(--typography-t-3-letter-spacing);
+	font-weight: var(--typography-t-3-font-weight);
+	color: var(--typography-t-3-colour);
 }
 
 @mixin typography-style-t-4 {
-	font-size: fluid-size(20px, 28px);
-	line-height: fluid-size(28px, 40px);
-	letter-spacing: fluid-size(0, -0.5px);
-	font-weight: var(--heading-font-weight);
+	font-size: var(--typography-t-4-font-size);
+	line-height: var(--typography-t-4-line-height);
+	letter-spacing: var(--typography-t-4-letter-spacing);
+	font-weight: var(--typography-t-4-font-weight);
+	color: var(--typography-t-4-colour);
 }
 
 @mixin typography-style-t-5 {
-	font-size: fluid-size(20px, 22px);
-	line-height: fluid-size(28px, 32px);
-	letter-spacing: fluid-size(0, -0.25px);
-	font-weight: var(--heading-font-weight);
+	font-size: var(--typography-t-5-font-size);
+	line-height: var(--typography-t-5-line-height);
+	letter-spacing: var(--typography-t-5-letter-spacing);
+	font-weight: var(--typography-t-5-font-weight);
+	color: var(--typography-t-5-colour);
 }
 
 @mixin typography-style-t-6 {
-	font-size: fluid-size(16px, 18px);
-	line-height: fluid-size(24px, 28px);
-	letter-spacing: 0;
-	font-weight: var(--heading-font-weight);
+	font-size: var(--typography-t-6-font-size);
+	line-height: var(--typography-t-6-line-height);
+	letter-spacing: var(--typography-t-6-letter-spacing);
+	font-weight: var(--typography-t-6-font-weight);
+	color: var(--typography-t-6-colour);
 }
 
 @mixin typography-style-body {
-	font-size: fluid-size(16px, 16px);
-	line-height: fluid-size(24px, 24px);
-	letter-spacing: 0;
+	font-size: var(--typography-body-font-size);
+	line-height: var(--typography-body-line-height);
+	letter-spacing: var(--typography-body-letter-spacing);
 }
 
 @mixin typography-style-body-large {
-	font-size: fluid-size(16px, 22px);
-	line-height: fluid-size(24px, 28px);
-	letter-spacing: 0;
+	font-size: var(--typography-body-large-font-size);
+	line-height: var(--typography-body-large-line-height);
+	letter-spacing: var(--typography-body-large-letter-spacing);
+}
+
+@mixin typography-style-eyebrow {
+	font-size: var(--typography-eyebrow-font-size);
+	line-height: var(--typography-eyebrow-line-height);
+	letter-spacing: var(--typography-eyebrow-letter-spacing);
 }

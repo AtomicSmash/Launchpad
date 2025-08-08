@@ -15,53 +15,63 @@
 			"text": true,
 			"palette": [
 				{
-					"slug": "primary",
-					"name": "Primary",
-					"color": "#0066FF"
+					"slug": "brand-1",
+					"name": "Brand 1",
+					"color": "#150043"
 				},
 				{
-					"slug": "secondary",
-					"name": "Secondary",
-					"color": "var(--wp--preset--color--rich-black)"
+					"slug": "brand-2",
+					"name": "Brand 2",
+					"color": "#FF0000"
 				},
 				{
-					"slug": "paragraph-dark",
-					"name": "Paragraph dark",
+					"slug": "brand-3",
+					"name": "Brand 3",
+					"color": "#DADAD2"
+				},
+				{
+					"slug": "text-1",
+					"name": "Text 1",
 					"color": "#404040"
 				},
 				{
-					"slug": "paragraph-light",
-					"name": "Paragraph light",
+					"slug": "text-2",
+					"name": "Text 2",
 					"color": "#6A6A6A"
 				},
 				{
-					"slug": "base",
-					"name": "base",
-					"color": "var(--wp--preset--color--rich-white)"
+					"slug": "border-1",
+					"name": "Border 1",
+					"color": "#AEAEAE"
 				},
 				{
-					"slug": "elevation-high",
-					"name": "Dark grey",
+					"slug": "border-2",
+					"name": "Border 2",
+					"color": "#D7D7D7"
+				},
+				{
+					"slug": "background-1",
+					"name": "Background 1",
 					"color": "#DCDCDC"
 				},
 				{
-					"slug": "elevation-mid",
-					"name": "Mid grey",
-					"color": "#EFEFEF"
-				},
-				{
-					"slug": "elevation-low",
-					"name": "Light grey",
+					"slug": "background-2",
+					"name": "Background 2",
 					"color": "#F5F5F5"
 				},
 				{
+					"slug": "background-3",
+					"name": "Background 3",
+					"color": "#FBFBFB"
+				},
+				{
 					"slug": "rich-white",
-					"name": "Rich white",
+					"name": "White",
 					"color": "rgb(255 255 255)"
 				},
 				{
 					"slug": "rich-black",
-					"name": "Rich black",
+					"name": "Black",
 					"color": "rgb(0 0 0)"
 				}
 			]

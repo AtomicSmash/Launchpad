@@ -2,9 +2,7 @@
 .wp-block-button.is-style-outline {
 	&__link {
 		padding: var(--wp--preset--spacing--2);
-		font-weight: var(--Typography-Button-font-weight);
 		border-radius: var(--wp--custom--radius--rounded);
-		letter-spacing: var(--Typography-Button-font-weight);
 
 		&:hover,
 		&:focus-visible {
@@ -15,11 +13,11 @@
 
 .wp-block-button:where(:not(.is-style-outline)) {
 	.wp-block-button__link {
-		background-color: var(--wp--preset--color--primary);
+		background-color: var(--wp--preset--color--button);
 
 		&:hover,
 		&:focus-visible {
-			background-color: var(--wp--preset--color--primary-dark);
+			background-color: var(--wp--preset--color--button-hover);
 		}
 	}
 }

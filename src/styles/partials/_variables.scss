@@ -1,48 +1,49 @@
 // For additional variables that don't fit into the other categories
 // Disclaimer: Only set variables in here
+@use "../shared/mixins";
 
 :root {
-	--heading-font-weight: 700;
-
 	// Extend typography
-	--Typography-Font-families-body: arial, helvetica, sans-serif, system-ui;
-	--Typography-t-1-font-size: fluid-size(32px, 64px);
-	--Typography-t-1-line-height: fluid-size(44px, 76px);
-	--Typography-t-1-letter-spacing: fluid-size(-1px, -2px);
-	--Typography-t-1-font-weight: var(--heading-font-weight);
-	--Typography-t-2-font-size: fluid-size(28px, 48px);
-	--Typography-t-2-line-height: fluid-size(40px, 60px);
-	--Typography-t-2-letter-spacing: fluid-size(-0.5px, -1.5px);
-	--Typography-t-2-font-weight: var(--heading-font-weight);
-	--Typography-t-3-font-size: fluid-size(22px, 32px);
-	--Typography-t-3-line-height: fluid-size(32px, 44px);
-	--Typography-t-3-letter-spacing: fluid-size(-0.25px, -1px);
-	--Typography-t-3-font-weight: var(--heading-font-weight);
-	--Typography-t-4-font-size: fluid-size(20px, 28px);
-	--Typography-t-4-line-height: fluid-size(28px, 40px);
-	--Typography-t-4-letter-spacing: fluid-size(0, -0.5px);
-	--Typography-t-4-font-weight: var(--heading-font-weight);
-	--Typography-t-5-font-size: fluid-size(20px, 22px);
-	--Typography-t-5-line-height: fluid-size(28px, 32px);
-	--Typography-t-5-letter-spacing: fluid-size(0, -0.25px);
-	--Typography-t-5-font-weight: var(--heading-font-weight);
-	--Typography-t-6-font-size: fluid-size(16px, 18px);
-	--Typography-t-6-line-height: fluid-size(24px, 28px);
-	--Typography-t-6-letter-spacing: 0;
-	--Typography-t-6-font-weight: var(--heading-font-weight);
-	--Typography-Body-font-size: fluid-size(16px, 16px);
-	--Typography-Body-line-height: fluid-size(24px, 24px);
-	--Typography-Body-letter-spacing: 0;
-	--Typography-Body-large-font-size: fluid-size(16px, 22px);
-	--Typography-Body-large-line-height: fluid-size(24px, 28px);
-	--Typography-Body-large-letter-spacing: 0;
-	--Typography-Button-font-size: fluid-size(16px, 16px);
-	--Typography-Button-line-height: fluid-size(24px, 24px);
-	--Typography-Button-letter-spacing: 0;
-	--Typography-Button-font-weight: var(--heading-font-weight);
-	--Typography-Eyebrow-font-size: 12px;
-	--Typography-Eyebrow-line-height: 16px;
-	--Typography-Eyebrow-letter-spacing: 4px;
+	--typography-font-families-body: arial, helvetica, sans-serif, system-ui;
+	--typography-t-1-font-size: #{mixins.fluid-size(32px, 64px)};
+	--typography-t-1-line-height: #{mixins.fluid-size(44px, 76px)};
+	--typography-t-1-letter-spacing: #{mixins.fluid-size(-1px, -2px)};
+	--typography-t-1-font-weight: 700;
+	--typography-t-1-colour: var(--wp--preset--color--headings);
+	--typography-t-2-font-size: #{mixins.fluid-size(28px, 48px)};
+	--typography-t-2-line-height: #{mixins.fluid-size(40px, 60px)};
+	--typography-t-2-letter-spacing: #{mixins.fluid-size(-0.5px, -1.5px)};
+	--typography-t-2-font-weight: 700;
+	--typography-t-2-colour: var(--wp--preset--color--headings);
+	--typography-t-3-font-size: #{mixins.fluid-size(22px, 32px)};
+	--typography-t-3-line-height: #{mixins.fluid-size(32px, 44px)};
+	--typography-t-3-letter-spacing: #{mixins.fluid-size(-0.25px, -1px)};
+	--typography-t-3-font-weight: 700;
+	--typography-t-3-colour: var(--wp--preset--color--headings);
+	--typography-t-4-font-size: #{mixins.fluid-size(20px, 28px)};
+	--typography-t-4-line-height: #{mixins.fluid-size(28px, 40px)};
+	--typography-t-4-letter-spacing: #{mixins.fluid-size(0, -0.5px)};
+	--typography-t-4-font-weight: 700;
+	--typography-t-4-colour: var(--wp--preset--color--headings);
+	--typography-t-5-font-size: #{mixins.fluid-size(20px, 22px)};
+	--typography-t-5-line-height: #{mixins.fluid-size(28px, 32px)};
+	--typography-t-5-letter-spacing: #{mixins.fluid-size(0, -0.25px)};
+	--typography-t-5-font-weight: 700;
+	--typography-t-5-colour: var(--wp--preset--color--headings);
+	--typography-t-6-font-size: #{mixins.fluid-size(16px, 18px)};
+	--typography-t-6-line-height: #{mixins.fluid-size(24px, 28px)};
+	--typography-t-6-letter-spacing: 0;
+	--typography-t-6-font-weight: 700;
+	--typography-t-6-colour: var(--wp--preset--color--headings);
+	--typography-body-font-size: #{mixins.fluid-size(16px, 16px)};
+	--typography-body-line-height: #{mixins.fluid-size(24px, 24px)};
+	--typography-body-letter-spacing: 0;
+	--typography-body-large-font-size: #{mixins.fluid-size(16px, 22px)};
+	--typography-body-large-line-height: #{mixins.fluid-size(24px, 28px)};
+	--typography-body-large-letter-spacing: 0;
+	--typography-eyebrow-font-size: 12px;
+	--typography-eyebrow-line-height: 16px;
+	--typography-eyebrow-letter-spacing: 4px;
 
 	// Extended container sizes
 	--wp--style--global--narrow-size: calc(

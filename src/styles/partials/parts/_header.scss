@@ -40,7 +40,7 @@ header:has(.transparent-header) {
 	}
 
 	&[data-is-scrolled="true"] {
-		background: var(--wp--preset--color--white);
+		background: var(--wp--preset--color--rich-white);
 	}
 
 	&[data-is-scrolled="true"]::before {
