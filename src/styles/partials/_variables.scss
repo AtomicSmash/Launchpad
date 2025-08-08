@@ -4,46 +4,53 @@
 
 :root {
 	// Extend typography
+	--typography-font-families-headings: arial, helvetica, sans-serif, system-ui;
 	--typography-font-families-body: arial, helvetica, sans-serif, system-ui;
 	--typography-t-1-font-size: #{mixins.fluid-size(32px, 64px)};
 	--typography-t-1-line-height: #{mixins.fluid-size(44px, 76px)};
 	--typography-t-1-letter-spacing: #{mixins.fluid-size(-1px, -2px)};
 	--typography-t-1-font-weight: 700;
-	--typography-t-1-colour: var(--wp--preset--color--headings);
+	--typography-t-1-font-family: var(--typography-font-families-headings);
 	--typography-t-2-font-size: #{mixins.fluid-size(28px, 48px)};
 	--typography-t-2-line-height: #{mixins.fluid-size(40px, 60px)};
 	--typography-t-2-letter-spacing: #{mixins.fluid-size(-0.5px, -1.5px)};
 	--typography-t-2-font-weight: 700;
-	--typography-t-2-colour: var(--wp--preset--color--headings);
+	--typography-t-2-font-family: var(--typography-font-families-headings);
 	--typography-t-3-font-size: #{mixins.fluid-size(22px, 32px)};
 	--typography-t-3-line-height: #{mixins.fluid-size(32px, 44px)};
 	--typography-t-3-letter-spacing: #{mixins.fluid-size(-0.25px, -1px)};
 	--typography-t-3-font-weight: 700;
-	--typography-t-3-colour: var(--wp--preset--color--headings);
+	--typography-t-3-font-family: var(--typography-font-families-headings);
 	--typography-t-4-font-size: #{mixins.fluid-size(20px, 28px)};
 	--typography-t-4-line-height: #{mixins.fluid-size(28px, 40px)};
 	--typography-t-4-letter-spacing: #{mixins.fluid-size(0, -0.5px)};
 	--typography-t-4-font-weight: 700;
-	--typography-t-4-colour: var(--wp--preset--color--headings);
+	--typography-t-4-font-family: var(--typography-font-families-headings);
 	--typography-t-5-font-size: #{mixins.fluid-size(20px, 22px)};
 	--typography-t-5-line-height: #{mixins.fluid-size(28px, 32px)};
 	--typography-t-5-letter-spacing: #{mixins.fluid-size(0, -0.25px)};
 	--typography-t-5-font-weight: 700;
-	--typography-t-5-colour: var(--wp--preset--color--headings);
+	--typography-t-5-font-family: var(--typography-font-families-headings);
 	--typography-t-6-font-size: #{mixins.fluid-size(16px, 18px)};
 	--typography-t-6-line-height: #{mixins.fluid-size(24px, 28px)};
 	--typography-t-6-letter-spacing: 0;
 	--typography-t-6-font-weight: 700;
-	--typography-t-6-colour: var(--wp--preset--color--headings);
+	--typography-t-6-font-family: var(--typography-font-families-headings);
 	--typography-body-font-size: #{mixins.fluid-size(16px, 16px)};
 	--typography-body-line-height: #{mixins.fluid-size(24px, 24px)};
 	--typography-body-letter-spacing: 0;
+	--typography-body-font-weight: 400;
+	--typography-body-font-family: var(--typography-font-families-body);
 	--typography-body-large-font-size: #{mixins.fluid-size(16px, 22px)};
 	--typography-body-large-line-height: #{mixins.fluid-size(24px, 28px)};
 	--typography-body-large-letter-spacing: 0;
+	--typography-body-large-font-weight: 400;
+	--typography-body-large-font-family: var(--typography-font-families-body);
 	--typography-eyebrow-font-size: 12px;
 	--typography-eyebrow-line-height: 16px;
 	--typography-eyebrow-letter-spacing: 4px;
+	--typography-eyebrow-font-weight: 700;
+	--typography-eyebrow-font-family: var(--typography-font-families-body);
 
 	// Extended container sizes
 	--wp--style--global--narrow-size: calc(

@@ -158,7 +158,8 @@
 	line-height: var(--typography-t-1-line-height);
 	letter-spacing: var(--typography-t-1-letter-spacing);
 	font-weight: var(--typography-t-1-font-weight);
-	color: var(--typography-t-1-colour);
+	color: var(--wp--preset--color--t-1);
+	font-family: var(--typography-t-1-font-family);
 }
 
 @mixin typography-style-t-2 {
@@ -166,7 +167,8 @@
 	line-height: var(--typography-t-2-line-height);
 	letter-spacing: var(--typography-t-2-letter-spacing);
 	font-weight: var(--typography-t-2-font-weight);
-	color: var(--typography-t-2-colour);
+	color: var(--wp--preset--color--t-2);
+	font-family: var(--typography-t-2-font-family);
 }
 
 @mixin typography-style-t-3 {
@@ -174,7 +176,8 @@
 	line-height: var(--typography-t-3-line-height);
 	letter-spacing: var(--typography-t-3-letter-spacing);
 	font-weight: var(--typography-t-3-font-weight);
-	color: var(--typography-t-3-colour);
+	color: var(--wp--preset--color--t-3);
+	font-family: var(--typography-t-3-font-family);
 }
 
 @mixin typography-style-t-4 {
@@ -182,7 +185,8 @@
 	line-height: var(--typography-t-4-line-height);
 	letter-spacing: var(--typography-t-4-letter-spacing);
 	font-weight: var(--typography-t-4-font-weight);
-	color: var(--typography-t-4-colour);
+	color: var(--wp--preset--color--t-4);
+	font-family: var(--typography-t-4-font-family);
 }
 
 @mixin typography-style-t-5 {
@@ -190,7 +194,8 @@
 	line-height: var(--typography-t-5-line-height);
 	letter-spacing: var(--typography-t-5-letter-spacing);
 	font-weight: var(--typography-t-5-font-weight);
-	color: var(--typography-t-5-colour);
+	color: var(--wp--preset--color--t-5);
+	font-family: var(--typography-t-5-font-family);
 }
 
 @mixin typography-style-t-6 {
@@ -198,23 +203,33 @@
 	line-height: var(--typography-t-6-line-height);
 	letter-spacing: var(--typography-t-6-letter-spacing);
 	font-weight: var(--typography-t-6-font-weight);
-	color: var(--typography-t-6-colour);
+	color: var(--wp--preset--color--t-6);
+	font-family: var(--typography-t-6-font-family);
 }
 
 @mixin typography-style-body {
 	font-size: var(--typography-body-font-size);
 	line-height: var(--typography-body-line-height);
 	letter-spacing: var(--typography-body-letter-spacing);
+	font-weight: var(--typography-body-font-weight);
+	color: var(--wp--preset--color--body);
+	font-family: var(--typography-body-font-family);
 }
 
 @mixin typography-style-body-large {
 	font-size: var(--typography-body-large-font-size);
 	line-height: var(--typography-body-large-line-height);
 	letter-spacing: var(--typography-body-large-letter-spacing);
+	font-weight: var(--typography-body-large-font-weight);
+	color: var(--wp--preset--color--body-large);
+	font-family: var(--typography-body-large-font-family);
 }
 
 @mixin typography-style-eyebrow {
 	font-size: var(--typography-eyebrow-font-size);
 	line-height: var(--typography-eyebrow-line-height);
 	letter-spacing: var(--typography-eyebrow-letter-spacing);
+	font-weight: var(--typography-eyebrow-font-weight);
+	color: var(--wp--preset--color--eyebrow);
+	font-family: var(--typography-eyebrow-font-family);
 }

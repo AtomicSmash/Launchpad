@@ -5,10 +5,9 @@ html {
 	text-size-adjust: none;
 }
 
-body {
-	font-family: var(--typography-font-families-body);
-	font-size: var(--typography-body-font-size);
-	color: var(--wp--preset--color--text-colour);
+body,
+p {
+	@include mixins.typography-style-body;
 }
 
 /* Prevent browsers from setting their own font sizes for our elements */

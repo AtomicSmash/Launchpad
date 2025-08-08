@@ -1,6 +1,6 @@
 .wp-block-button,
 .wp-block-button.is-style-outline {
-	&__link {
+	.wp-block-button__link {
 		padding: var(--wp--preset--spacing--2);
 		border-radius: var(--wp--custom--radius--rounded);
 
@@ -13,21 +13,27 @@
 
 .wp-block-button:where(:not(.is-style-outline)) {
 	.wp-block-button__link {
+		border: 2px solid var(--wp--preset--color--button);
 		background-color: var(--wp--preset--color--button);
+		color: var(--wp--preset--color--button-text);
 
 		&:hover,
 		&:focus-visible {
 			background-color: var(--wp--preset--color--button-hover);
+			color: var(--wp--preset--color--button-hover-text);
 		}
 	}
 }
 
-.has-primary-background-color {
-	.wp-block-button.is-style-outline {
-		.wp-block-button__link {
-			&:focus-visible {
-				outline-color: var(--wp--preset--color--rich-white);
-			}
+.wp-block-button.is-style-outline {
+	.wp-block-button__link {
+		border: 2px solid var(--wp--preset--color--button);
+		color: var(--wp--preset--color--button);
+
+		&:hover,
+		&:focus-visible {
+			background-color: var(--wp--preset--color--button);
+			color: var(--wp--preset--color--button-text);
 		}
 	}
 }

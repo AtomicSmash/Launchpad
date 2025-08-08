@@ -1,5 +1,12 @@
 # @atomicsmash/launchpad
 
+## 1.1.1
+
+### Patch Changes
+
+- 234d5c9: Update colours to make it more intuitive
+- 9c21aae: Add missing typography variables for font family, colour and font-weight
+
 ## 1.1.0
 
 ### Minor Changes
