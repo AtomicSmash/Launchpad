@@ -2,7 +2,6 @@
  * This file contains any styling which affects the content and should only be shown on the editor side
  */
 @use "sass:meta";
-@use "partials/variables"; // duplicated to avoid root container issues
 
 // Is root container ensures the styles are only applied to content in the editor.
 .is-root-container {

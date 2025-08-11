@@ -1,5 +1,12 @@
 # @atomicsmash/launchpad
 
+## 1.1.2
+
+### Patch Changes
+
+- 0f00b29: Move typography variables to the parent only stylesheet
+- 42758dc: Only load the extra vars stylesheet if it's the parent theme
+
 ## 1.1.1
 
 ### Patch Changes

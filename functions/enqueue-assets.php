@@ -29,16 +29,18 @@ function add_editor_content_styles(): void {
 			throw new Error( wp_kses_post( $editor_content_stylesheet->get_error_message() ) );
 		}
 		wp_enqueue_style( 'launchpad-editor-content', $editor_content_stylesheet['source'], $editor_content_stylesheet['dependencies'], $editor_content_stylesheet['version'] );
-		$colours_stylesheet = $assets->get_cached_asset( 'styles/colours.scss' );
-		if ( is_wp_error( $colours_stylesheet ) ) {
-			/**
-			 * $colours_stylesheet is WP_Error
-			 *
-			 * @var WP_Error $colours_stylesheet
-			 */
-			throw new Error( wp_kses_post( $colours_stylesheet->get_error_message() ) );
+		if ( ! is_child_theme() ) {
+			$variables_stylesheet = $assets->get_cached_asset( 'styles/variables.scss' );
+			if ( is_wp_error( $variables_stylesheet ) ) {
+				/**
+				 * $variables_stylesheet is WP_Error
+				 *
+				 * @var WP_Error $variables_stylesheet
+				 */
+				throw new Error( wp_kses_post( $variables_stylesheet->get_error_message() ) );
+			}
+			wp_enqueue_style( 'launchpad-colours', $variables_stylesheet['source'], $variables_stylesheet['dependencies'], $variables_stylesheet['version'] );
 		}
-		wp_enqueue_style( 'launchpad-colours', $colours_stylesheet['source'], $colours_stylesheet['dependencies'], $colours_stylesheet['version'] );
 	}
 }
 add_action( 'enqueue_block_assets', __NAMESPACE__ . '\\add_editor_content_styles' );
@@ -94,17 +96,19 @@ function scripts(): void {
 		throw new Error( wp_kses_post( $main_stylesheet->get_error_message() ) );
 	}
 	wp_enqueue_style( 'launchpad-theme', $main_stylesheet['source'], $main_stylesheet['dependencies'], $main_stylesheet['version'] );
-	$colours_stylesheet = $assets->get_cached_asset( 'styles/colours.scss' );
-	if ( is_wp_error( $colours_stylesheet ) ) {
-		/**
-		 * $colours_stylesheet is WP_Error
-		 *
-		 * @var WP_Error $colours_stylesheet
-		 */
-		throw new Error( wp_kses_post( $colours_stylesheet->get_error_message() ) );
+	if ( ! is_child_theme() ) {
+		$variables_stylesheet = $assets->get_cached_asset( 'styles/variables.scss' );
+		if ( is_wp_error( $variables_stylesheet ) ) {
+			/**
+			 * $variables_stylesheet is WP_Error
+			 *
+			 * @var WP_Error $variables_stylesheet
+			 */
+			throw new Error( wp_kses_post( $variables_stylesheet->get_error_message() ) );
+		}
+		wp_enqueue_style( 'launchpad-colours', $variables_stylesheet['source'], $variables_stylesheet['dependencies'], $variables_stylesheet['version'] );
+		wp_enqueue_style( 'launchpad-theme-info', get_template_directory_uri() . '/style.css', array(), filemtime( get_template_directory() . '/style.css' ) );
 	}
-	wp_enqueue_style( 'launchpad-colours', $colours_stylesheet['source'], $colours_stylesheet['dependencies'], $colours_stylesheet['version'] );
-	wp_enqueue_style( 'launchpad-theme-info', get_template_directory_uri() . '/style.css', array(), filemtime( get_template_directory() . '/style.css' ) );
 
 	$admin_bar_height_script = $assets->get_cached_asset( 'scripts/fixWPAdminBarHeight.ts' );
 	if ( is_wp_error( $admin_bar_height_script ) ) {
