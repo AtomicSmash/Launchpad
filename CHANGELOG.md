@@ -1,5 +1,13 @@
 # @atomicsmash/launchpad
 
+## 1.1.3
+
+### Patch Changes
+
+- d311c91: Update post header to use buttons block
+- 4f1462c: Fix chip styling
+- 7fb6926: Fix icons
+
 ## 1.1.2
 
 ### Patch Changes

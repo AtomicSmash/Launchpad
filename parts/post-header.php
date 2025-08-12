@@ -23,11 +23,17 @@ if ( ! is_bool( $show_author ) ) {
 						<?php
 						echo wp_kses_post(
 							\LaunchpadBlocks\Blocks\ToPHP\render_block(
-								'core/button',
+								'core/buttons',
+								array(),
 								array(
-									'url' => get_post_type_archive_link( get_post_type() ),
-									'text' => __( 'Back to archive', 'launchpad' ),
-									'className' => 'is-style-outline is-style-outline--1',
+									\LaunchpadBlocks\Blocks\ToPHP\get_block_comment(
+										'core/button',
+										array(
+											'url' => get_post_type_archive_link( get_post_type() ),
+											'text' => __( 'Back to archive', 'launchpad' ),
+											'className' => 'is-style-outline is-style-outline--1',
+										)
+									),
 								)
 							)
 						);

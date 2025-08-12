@@ -18,16 +18,6 @@ use Launchpad\Assets, Error, WPSEO_Primary_Term, WP_Block;
  * @throws Error If there's an issue loading the sprite.
  */
 function icon( string $icon_name, array $attributes = array() ): string {
-	$assets = new Assets();
-	$icon_sprite = $assets->get_cached_asset( 'icons/sprite.svg' );
-	if ( is_wp_error( $icon_sprite ) ) {
-		/**
-		 * $icon_sprite is WP_Error
-		 *
-		 * @var WP_Error $icon_sprite
-		 */
-		throw new Error( wp_kses_post( $icon_sprite->get_error_message() ) );
-	}
 	$attrs = join(
 		' ',
 		array_map(
@@ -41,7 +31,7 @@ function icon( string $icon_name, array $attributes = array() ): string {
 		)
 	);
 
-	$result = '<svg xmlns="http://www.w3.org/2000/svg" ' . $attrs . '><use href="' . $icon_sprite['source'] . '#' . $icon_name . '"></use></svg>';
+	$result = '<svg xmlns="http://www.w3.org/2000/svg" ' . $attrs . '><use href="' . get_home_url( null, '/wp-content/themes/launchpad/dist/icons/sprite.svg' ) . '#' . $icon_name . '"></use></svg>';
 	return $result;
 }
 

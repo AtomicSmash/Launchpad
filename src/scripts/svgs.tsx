@@ -18,7 +18,7 @@ export function Icon(props: IconProps) {
 		>
 			{/* Full URL is required to make SVGs load in iframed block editor. */}
 			<use
-				href={`${isEditorMode ? `${window.location.protocol}//${window.location.host}` : ""}/wp-content/themes/launchpad/dist/images/sprite.svg#${iconName}`}
+				href={`${isEditorMode ? `${window.location.protocol}//${window.location.host}` : ""}/wp-content/themes/launchpad/dist/icons/sprite.svg#${iconName}`}
 			/>
 		</svg>
 	);

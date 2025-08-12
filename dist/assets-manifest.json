@@ -2,13 +2,13 @@
   "scripts/fixWPAdminBarHeight.ts": "js/fixWPAdminBarHeight.f582ec9cf0c10112c767.js",
   "scripts/formatters.tsx": "js/formatters.ba35c503276003807a30.js",
   "scripts/prefersReducedMotion.ts": "js/prefersReducedMotion.3b9a719c211ccde0416d.js",
-  "scripts/registerCustomIcons.tsx": "js/registerCustomIcons.461b91f46b34c2dffb20.js",
+  "scripts/registerCustomIcons.tsx": "js/registerCustomIcons.0a84671c1c0a57ca4444.js",
   "scripts/svgs.editor.tsx": "js/svgs.editor.769b833a23707aefda3e.js",
-  "scripts/svgs.tsx": "js/svgs.5b07a66d9296ea5785a1.js",
+  "scripts/svgs.tsx": "js/svgs.cf52ad1fe18f99cbd770.js",
   "scripts/transparentHeader.ts": "js/transparentHeader.9cec55045d30e3054fa8.js",
-  "styles/editor-content.scss": "css/editor-content.ccb20515d062b9c57b38.css",
+  "styles/editor-content.scss": "css/editor-content.c8656b979eefa67b9ffd.css",
   "styles/editor-controls.scss": "css/editor-controls.83bbf8778d11aebc344a.css",
   "styles/forms/gravity-forms.scss": "css/forms/gravity-forms.2a80dfc3201906f9f626.css",
-  "styles/styles.scss": "css/styles.efed45ca78577bd177a9.css",
+  "styles/styles.scss": "css/styles.9a3a44f6529851b7bef6.css",
   "styles/variables.scss": "css/variables.d3d255e831856566f99a.css"
 }

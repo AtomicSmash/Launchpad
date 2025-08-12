@@ -3,7 +3,7 @@
         'name' => 'atomicsmash/launchpad',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '4c86d18f771968944568546c52644c7902c94620',
+        'reference' => '2dff677bc4b3fb64b547ebb97906e2c772d60765',
         'type' => 'wordpress-theme',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'atomicsmash/launchpad' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '4c86d18f771968944568546c52644c7902c94620',
+            'reference' => '2dff677bc4b3fb64b547ebb97906e2c772d60765',
             'type' => 'wordpress-theme',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
