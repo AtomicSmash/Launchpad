@@ -60,9 +60,9 @@ Not your first time here? See [Recent Changes for Developers](https://github.com
 ## Minimum Requirements ##
 
 * **PHP:** 7.4  
-  - Tested up to PHP 8.3
-* **WordPress:** 5.7  
-  - Tested up to WP 6.6
+  - Tested up to PHP 8.4
+* **WordPress:** 6.0  
+  - Tested up to WP 6.8
 
 ## Installation ##
 
@@ -171,6 +171,20 @@ Bam, we now have:
 The `register_extended_post_type()` and `register_extended_taxonomy()` functions are ultimately wrappers for the `register_post_type()` and `register_taxonomy()` functions in WordPress core, so any of the parameters from those functions can be used.
 
 There's quite a bit more you can do. [See the wiki for full documentation.](https://github.com/johnbillion/extended-cpts/wiki)
+
+## Sponsors
+
+<p align="center">The time that I spend maintaining this library and others is in part sponsored by:</p>
+
+<p align="center"><a href="https://automattic.com"><img src="https://cdn.jsdelivr.net/gh/johnbillion/johnbillion@latest/assets/sponsors/automattic.svg" alt="Automattic" width="50%"></a></p>
+
+<p align="center"><a href="https://servmask.com"><img src="https://cdn.jsdelivr.net/gh/johnbillion/johnbillion@latest/assets/sponsors/servmask.svg" alt="ServMask" width="25%"></a></p>
+
+<p align="center">Plus all my kind sponsors on GitHub:</p>
+
+<p align="center"><a href="https://github.com/sponsors/johnbillion"><img src="https://cdn.jsdelivr.net/gh/johnbillion/johnbillion@latest/sponsors.svg" alt="Sponsors"></p>
+
+<p align="center"><a href="https://github.com/sponsors/johnbillion">Click here to find out about supporting my open source tools and plugins</a>.</p>
 
 ## Contributing and Testing ##
 

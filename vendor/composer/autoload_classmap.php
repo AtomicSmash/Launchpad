@@ -49,6 +49,7 @@ return array(
     'Args\\register_post_status' => $vendorDir . '/johnbillion/args/src/register_post_status.php',
     'Args\\register_post_type' => $vendorDir . '/johnbillion/args/src/register_post_type.php',
     'Args\\register_rest_field' => $vendorDir . '/johnbillion/args/src/register_rest_field.php',
+    'Args\\register_setting' => $vendorDir . '/johnbillion/args/src/register_setting.php',
     'Args\\register_taxonomy' => $vendorDir . '/johnbillion/args/src/register_taxonomy.php',
     'Args\\register_term_meta' => $vendorDir . '/johnbillion/args/src/register_term_meta.php',
     'Args\\wp_count_terms' => $vendorDir . '/johnbillion/args/src/wp_count_terms.php',

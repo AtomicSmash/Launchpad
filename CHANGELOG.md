@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 1.1.4
+
+### Patch Changes
+
+- 6180c79: Update deps
+
 ## 1.1.3
 
 ### Patch Changes

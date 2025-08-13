@@ -1,5 +1,11 @@
 # compiler-helpers
 
+## 0.1.3
+
+### Patch Changes
+
+- 8f38645: Fix wordpress asset info arrays
+
 ## 0.1.2
 
 ### Patch Changes

@@ -1,7 +1,7 @@
 {
   "name": "compiler-helpers",
   "private": true,
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A group of PHP helpers for the new AS compiler. For use with the npm package `@atomicsmash/compiler`.",
   "scripts": {
     "publish": "changeset tag"

@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Launchpad\\' => array($baseDir . '/classes'),
-    'ExtCPTs\\Tests\\' => array($vendorDir . '/johnbillion/extended-cpts/tests/integration'),
     'ExtCPTs\\' => array($vendorDir . '/johnbillion/extended-cpts/src'),
     'AtomicSmash\\CompilerHelpers\\' => array($vendorDir . '/atomicsmash/compiler-helpers/classes'),
     'Args\\' => array($vendorDir . '/johnbillion/args/src'),

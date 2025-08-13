@@ -17,7 +17,6 @@ class ComposerStaticInit713c7a5e92a7bdbee67728483bdf8fb6
         ),
         'E' => 
         array (
-            'ExtCPTs\\Tests\\' => 14,
             'ExtCPTs\\' => 8,
         ),
         'A' => 
@@ -31,10 +30,6 @@ class ComposerStaticInit713c7a5e92a7bdbee67728483bdf8fb6
         'Launchpad\\' => 
         array (
             0 => __DIR__ . '/../..' . '/classes',
-        ),
-        'ExtCPTs\\Tests\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/johnbillion/extended-cpts/tests/integration',
         ),
         'ExtCPTs\\' => 
         array (
@@ -94,6 +89,7 @@ class ComposerStaticInit713c7a5e92a7bdbee67728483bdf8fb6
         'Args\\register_post_status' => __DIR__ . '/..' . '/johnbillion/args/src/register_post_status.php',
         'Args\\register_post_type' => __DIR__ . '/..' . '/johnbillion/args/src/register_post_type.php',
         'Args\\register_rest_field' => __DIR__ . '/..' . '/johnbillion/args/src/register_rest_field.php',
+        'Args\\register_setting' => __DIR__ . '/..' . '/johnbillion/args/src/register_setting.php',
         'Args\\register_taxonomy' => __DIR__ . '/..' . '/johnbillion/args/src/register_taxonomy.php',
         'Args\\register_term_meta' => __DIR__ . '/..' . '/johnbillion/args/src/register_term_meta.php',
         'Args\\wp_count_terms' => __DIR__ . '/..' . '/johnbillion/args/src/wp_count_terms.php',

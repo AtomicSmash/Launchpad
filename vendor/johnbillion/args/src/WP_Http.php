@@ -21,10 +21,14 @@ class WP_Http extends Shared\Base {
 	public const METHOD_OPTIONS = 'OPTIONS';
 	public const METHOD_PATCH = 'PATCH';
 
-	/** @var array<string, string> */
-	protected array $map = [
-		'user_agent' => 'user-agent',
-	];
+	/**
+	 * @return array<string, string>
+	 */
+	public function getMap() : array {
+		return [
+			'user_agent' => 'user-agent',
+		];
+	}
 
 	/**
 	 * Request method.
@@ -108,7 +112,7 @@ class WP_Http extends Shared\Base {
 	 *
 	 * @var string|mixed[]
 	 */
-	public $body;
+	public string|array $body;
 
 	/**
 	 * Whether to compress the $body when sending the request.
