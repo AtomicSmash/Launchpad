@@ -1,5 +1,15 @@
 # @atomicsmash/launchpad
 
+## 1.2.0
+
+### Minor Changes
+
+- 62b292d: Add way to override archives for specific post types
+
+### Patch Changes
+
+- 653f584: Fix colour values not being applied automatically
+
 ## 1.1.4
 
 ### Patch Changes
