@@ -1,29 +1,29 @@
 .yoast_breadcrumbs__container {
 	padding-block: var(--wp--preset--spacing--2);
+}
 
-	p {
-		padding: 0;
+.yoast-breadcrumbs {
+	padding: 0;
+	margin: 0;
+
+	> span {
+		align-items: center;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
 		margin: 0;
+		padding-block: 0.5rem;
+		padding-inline: 0;
 
-		> span {
-			align-items: center;
+		span {
+			list-style: none;
 			display: flex;
-			flex-wrap: wrap;
+			align-items: center;
 			gap: 1rem;
-			margin: 0;
-			padding-block: 0.5rem;
-			padding-inline: 0;
 
-			span {
-				list-style: none;
-				display: flex;
-				align-items: center;
-				gap: 1rem;
-
-				&.breadcrumb_last {
-					font-weight: 700;
-					text-decoration: none;
-				}
+			&.breadcrumb_last {
+				font-weight: 700;
+				text-decoration: none;
 			}
 		}
 	}

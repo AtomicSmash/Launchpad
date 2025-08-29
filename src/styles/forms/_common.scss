@@ -42,12 +42,13 @@
 
 %single-line-input {
 	--form-input-padding: 1em;
+	--form-input-border-radius: 0.25em;
 
 	width: 100%;
 	background-color: var(--form-input-background-colour, #fbfbfb);
 	border: 0.125em solid var(--form-input-border-colour, #e0e0e0);
 	padding: var(--form-input-padding);
-	border-radius: 0.25em;
+	border-radius: var(--form-input-border-radius);
 	font-size: 1em;
 	line-height: 1.5;
 	color: var(--form-input-text-colour, #000);

@@ -19,7 +19,7 @@ if ( have_posts() ) :
 	<?php
 	while ( have_posts() ) :
 		the_post();
-		get_template_part( 'parts/post-card' );
+		get_template_part( 'parts/post-card', get_post_type() );
 		endwhile;
 	?>
 	</section>

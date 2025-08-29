@@ -1,5 +1,13 @@
 # @atomicsmash/launchpad
 
+## 1.2.1
+
+### Patch Changes
+
+- df4ed4f: Fix yoast breadcrumbs block styling
+- a14371a: Make form input border radius easier to override
+- ef9a9b3: Add post type name to post card template part call to allow overriding post card for a single post type
+
 ## 1.2.0
 
 ### Minor Changes
