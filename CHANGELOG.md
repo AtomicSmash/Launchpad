@@ -1,5 +1,24 @@
 # @atomicsmash/launchpad
 
+## 2.0.0
+
+### Major Changes
+
+- e75f840: Remove old footer menus from being registered
+
+### Minor Changes
+
+- 98971ed: Add AS client role
+- 98971ed: Add Tester role
+- 9860ea0: add esc_tel_link helper
+
+### Patch Changes
+
+- 69af947: Use fingerprinted file names for SVGs for cachebusting
+- ac81d3b: Fix yoast priority in admin
+- a164e99: Fix button borders on hover
+- c93c811: add dotenv import to playwright config file
+
 ## 1.2.1
 
 ### Patch Changes

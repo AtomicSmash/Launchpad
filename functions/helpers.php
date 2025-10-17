@@ -18,6 +18,8 @@ use Launchpad\Assets, Error, WPSEO_Primary_Term, WP_Block;
  * @throws Error If there's an issue loading the sprite.
  */
 function icon( string $icon_name, array $attributes = array() ): string {
+	$assets = new Assets();
+	$icon_sprite = $assets->get_cached_asset( 'icons/sprite.svg' );
 	$attrs = join(
 		' ',
 		array_map(
@@ -31,7 +33,7 @@ function icon( string $icon_name, array $attributes = array() ): string {
 		)
 	);
 
-	$result = '<svg xmlns="http://www.w3.org/2000/svg" ' . $attrs . '><use href="' . get_home_url( null, '/wp-content/themes/launchpad/dist/icons/sprite.svg' ) . '#' . $icon_name . '"></use></svg>';
+	$result = '<svg xmlns="http://www.w3.org/2000/svg" ' . $attrs . '><use href="' . $icon_sprite['source'] . '#' . $icon_name . '"></use></svg>';
 	return $result;
 }
 
@@ -76,4 +78,17 @@ function get_primary_term( string $the_taxonomy, int|null $post_id = null ): \WP
 		$term = $the_terms[0];
 	}
 	return $term;
+}
+
+/**
+ * Escape the value of a telephone number for use in a tel: link.
+ *
+ * @param string $phone_number The phone number to escape.
+ */
+function esc_tel_link( string $phone_number ): string {
+	if ( str_starts_with( $phone_number, '+' ) && str_contains( $phone_number, '(0)' ) ) {
+		$phone_number = str_replace( '(0)', '', $phone_number );
+	}
+	// Remove all characters that aren't numbers or the plus symbol.
+	return (string) preg_replace( '/([^+0-9])/', '', $phone_number );
 }

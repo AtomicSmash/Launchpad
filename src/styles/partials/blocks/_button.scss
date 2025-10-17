@@ -20,6 +20,7 @@
 		&:hover,
 		&:focus-visible {
 			background-color: var(--wp--preset--color--button-hover);
+			border-color: var(--wp--preset--color--button-hover);
 			color: var(--wp--preset--color--button-hover-text);
 		}
 	}

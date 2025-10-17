@@ -10,5 +10,8 @@
 	// Add all form styles (performance is less of a concern for admin side.
 	@include meta.load-css("forms/gravity-forms");
 
-	font-family: var(--typography-font-families-body);
+	/* stylelint-disable-next-line no-duplicate-selectors -- Allow to opt into new scss behaviour */
+	& {
+		font-family: var(--typography-font-families-body);
+	}
 }

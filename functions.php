@@ -7,7 +7,7 @@
 
 namespace Launchpad;
 
-define( 'LAUNCHPAD_THEME_VERSION', '1.2.1' );
+define( 'LAUNCHPAD_THEME_VERSION', '2.0.0' );
 
 // Require autoloader.
 require __DIR__ . '/vendor/autoload.php';
@@ -33,7 +33,8 @@ require_once __DIR__ . '/functions/gravity-forms.php';
 require_once __DIR__ . '/functions/helpers.php';
 require_once __DIR__ . '/functions/mailtrap.php';
 require_once __DIR__ . '/functions/media.php';
-require_once __DIR__ . '/functions/menus.php';
+require_once __DIR__ . '/functions/roles-and-capabilities.php';
 require_once __DIR__ . '/functions/sanitisation.php';
+require_once __DIR__ . '/functions/seo.php';
 require_once __DIR__ . '/functions/theme-setup.php';
 require_once __DIR__ . '/functions/updates.php';
