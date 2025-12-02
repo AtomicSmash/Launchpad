@@ -19,6 +19,7 @@
 @use "partials/parts/header";
 @use "partials/parts/footer";
 @use "partials/parts/post-card";
+@use "partials/parts/post-password-form";
 @use "partials/parts/yoast-breadcrumbs";
 
 // Accessibility must always be last so nothing overrides it.

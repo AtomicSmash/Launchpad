@@ -1,5 +1,22 @@
 # @atomicsmash/launchpad
 
+## 3.0.0
+
+### Major Changes
+
+- 7e5abd3: Refactor buttons styling so they work better for both links and js trigger buttons
+
+### Minor Changes
+
+- 7e5abd3: Add base styling for post password form
+- ce0b44c: Add hyperlink class for forcing other elements to match the hyperlink style
+
+## 2.0.2
+
+### Patch Changes
+
+- 8a7bae3: Fix SVGs by using full non-relative paths
+
 ## 2.0.1
 
 ### Patch Changes
