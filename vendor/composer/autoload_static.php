@@ -11,15 +11,15 @@ class ComposerStaticInit713c7a5e92a7bdbee67728483bdf8fb6
     );
 
     public static $prefixLengthsPsr4 = array (
-        'L' => 
+        'L' =>
         array (
             'Launchpad\\' => 10,
         ),
-        'E' => 
+        'E' =>
         array (
             'ExtCPTs\\' => 8,
         ),
-        'A' => 
+        'A' =>
         array (
             'AtomicSmash\\CompilerHelpers\\' => 28,
             'Args\\' => 5,
@@ -27,19 +27,19 @@ class ComposerStaticInit713c7a5e92a7bdbee67728483bdf8fb6
     );
 
     public static $prefixDirsPsr4 = array (
-        'Launchpad\\' => 
+        'Launchpad\\' =>
         array (
             0 => __DIR__ . '/../..' . '/classes',
         ),
-        'ExtCPTs\\' => 
+        'ExtCPTs\\' =>
         array (
             0 => __DIR__ . '/..' . '/johnbillion/extended-cpts/src',
         ),
-        'AtomicSmash\\CompilerHelpers\\' => 
+        'AtomicSmash\\CompilerHelpers\\' =>
         array (
             0 => __DIR__ . '/..' . '/atomicsmash/compiler-helpers/classes',
         ),
-        'Args\\' => 
+        'Args\\' =>
         array (
             0 => __DIR__ . '/..' . '/johnbillion/args/src',
         ),

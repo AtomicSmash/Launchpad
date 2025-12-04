@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 3.0.1
+
+### Patch Changes
+
+- 63c2f53: Ensure manifest imports are not cached
+
 ## 3.0.0
 
 ### Major Changes
