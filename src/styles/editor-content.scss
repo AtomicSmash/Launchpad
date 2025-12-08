@@ -14,4 +14,15 @@
 	& {
 		font-family: var(--typography-font-families-body);
 	}
+
+	&:has(.site-header-editor) {
+		--header-y-padding: var(--wp--preset--spacing--4);
+
+		background-color: var(--wp--preset--color--rich-white);
+		padding-block: var(--header-y-padding);
+
+		.wp-block-site-logo {
+			flex: 0 0 auto;
+		}
+	}
 }
