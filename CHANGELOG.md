@@ -1,5 +1,15 @@
 # @atomicsmash/launchpad
 
+## 4.0.0
+
+### Major Changes
+
+- 6c6c1a7: Add support for WP 6.9
+
+### Minor Changes
+
+- 6290b34: Add heading styles to post title block
+
 ## 3.0.2
 
 ### Patch Changes

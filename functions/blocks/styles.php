@@ -26,6 +26,7 @@ function register_block_styles(): void {
 		array(
 			'core/paragraph',
 			'core/heading',
+			'core/post-title',
 		),
 		array(
 			'name'  => 't-1',
@@ -37,6 +38,7 @@ function register_block_styles(): void {
 		array(
 			'core/paragraph',
 			'core/heading',
+			'core/post-title',
 		),
 		array(
 			'name'  => 't-2',
@@ -48,6 +50,7 @@ function register_block_styles(): void {
 		array(
 			'core/paragraph',
 			'core/heading',
+			'core/post-title',
 		),
 		array(
 			'name'  => 't-3',
@@ -59,6 +62,7 @@ function register_block_styles(): void {
 		array(
 			'core/paragraph',
 			'core/heading',
+			'core/post-title',
 		),
 		array(
 			'name'  => 't-4',
@@ -70,6 +74,7 @@ function register_block_styles(): void {
 		array(
 			'core/paragraph',
 			'core/heading',
+			'core/post-title',
 		),
 		array(
 			'name'  => 't-5',
@@ -81,6 +86,7 @@ function register_block_styles(): void {
 		array(
 			'core/paragraph',
 			'core/heading',
+			'core/post-title',
 		),
 		array(
 			'name'  => 't-6',
