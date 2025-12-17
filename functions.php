@@ -7,12 +7,13 @@
 
 namespace Launchpad;
 
-define( 'LAUNCHPAD_THEME_VERSION', '4.0.0' );
+define( 'LAUNCHPAD_THEME_VERSION', '5.0.0' );
 
 // Require autoloader.
 require __DIR__ . '/vendor/autoload.php';
 
 // Blocks
+require_once __DIR__ . '/functions/blocks/disable-blocks.php';
 require_once __DIR__ . '/functions/blocks/patterns.php';
 require_once __DIR__ . '/functions/blocks/styles.php';
 

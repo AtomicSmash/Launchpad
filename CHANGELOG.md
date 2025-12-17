@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 5.0.0
+
+### Major Changes
+
+- ff72a7d: Disable core details and accordion blocks
+
 ## 4.0.0
 
 ### Major Changes
