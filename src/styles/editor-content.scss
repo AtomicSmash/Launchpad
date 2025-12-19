@@ -4,7 +4,7 @@
 @use "sass:meta";
 
 // Is root container ensures the styles are only applied to content in the editor.
-.is-root-container {
+:where(.is-root-container) {
 	@include meta.load-css("styles");
 
 	// Add all form styles (performance is less of a concern for admin side.

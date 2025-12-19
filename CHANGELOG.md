@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 6.0.0
+
+### Major Changes
+
+- 2f2c74d: Reduce the specificity of the editor styles
+
 ## 5.0.0
 
 ### Major Changes
