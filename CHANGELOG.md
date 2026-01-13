@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 6.0.1
+
+### Patch Changes
+
+- e719b31: Fix calendar and ticket icon artifacts
+
 ## 6.0.0
 
 ### Major Changes
