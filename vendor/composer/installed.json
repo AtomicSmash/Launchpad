@@ -20,7 +20,7 @@
             },
             "time": "2025-05-23T15:11:25+00:00",
             "type": "library",
-            "installation-source": "dist",
+            "installation-source": "source",
             "autoload": {
                 "psr-4": {
                     "AtomicSmash\\CompilerHelpers\\": "classes/"
