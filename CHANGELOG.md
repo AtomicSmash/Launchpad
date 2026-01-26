@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 6.0.2
+
+### Patch Changes
+
+- b97d9cd: Set editor "body" colour to same as front end
+
 ## 6.0.1
 
 ### Patch Changes

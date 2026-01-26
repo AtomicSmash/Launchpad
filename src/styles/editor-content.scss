@@ -3,6 +3,11 @@
  */
 @use "sass:meta";
 
+.editor-styles-wrapper {
+	// Set editor "body" colour to same as front end.
+	background-color: var(--wp--preset--color--page-background);
+}
+
 // Is root container ensures the styles are only applied to content in the editor.
 :where(.is-root-container) {
 	@include meta.load-css("styles");
