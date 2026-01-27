@@ -33,12 +33,14 @@
 }
 
 .wp-block-button.is-style-outline {
-	border: 2px solid var(--wp--preset--color--button);
-	color: var(--wp--preset--color--button);
+	background-color: transparent !important;
+	border: 2px solid var(--wp--preset--color--button-outline);
+	color: var(--wp--preset--color--button-outline-text);
 
 	&:hover,
 	&:focus-visible {
-		background-color: var(--wp--preset--color--button);
-		color: var(--wp--preset--color--button-text);
+		background-color: var(--wp--preset--color--button-outline-hover) !important;
+		border-color: var(--wp--preset--color--button-outline-hover);
+		color: var(--wp--preset--color--button-outline-hover-text);
 	}
 }

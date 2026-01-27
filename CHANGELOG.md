@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 7.0.0
+
+### Major Changes
+
+- 3d0e212: Fix outline button default styles
+
 ## 6.0.2
 
 ### Patch Changes
