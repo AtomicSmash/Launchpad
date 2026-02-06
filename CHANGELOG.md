@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 7.0.1
+
+### Patch Changes
+
+- d3030c6: Fix icons not inheriting text colour
+
 ## 7.0.0
 
 ### Major Changes
