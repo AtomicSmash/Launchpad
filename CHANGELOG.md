@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 7.1.0
+
+### Minor Changes
+
+- 532384f: Add theme support for global banners to make it easier to remove on child projects (remains enabled by default)
+
 ## 7.0.1
 
 ### Patch Changes

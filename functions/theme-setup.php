@@ -20,6 +20,7 @@ function theme_setup(): void {
 	add_theme_support( 'block-template-parts' );
 	add_theme_support( 'post-thumbnails' );
 	remove_theme_support( 'core-block-patterns' );
+	add_theme_support( 'launchpad-default-global-banners' );
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\theme_setup', 15 );
 
