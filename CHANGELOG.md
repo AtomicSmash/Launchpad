@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 8.0.0
+
+### Major Changes
+
+- f040539: Changed style which removed spacing between blocks with backgrounds so it only affects alignfull blocks.
+
 ## 7.1.0
 
 ### Minor Changes

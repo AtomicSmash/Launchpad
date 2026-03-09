@@ -89,7 +89,7 @@ body {
 }
 
 // Remove margin between two blocks with backgrounds
-.has-background + .has-background {
+.has-background.alignfull + .has-background.alignfull {
 	margin-block-start: 0;
 }
 
