@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 8.1.0
+
+### Minor Changes
+
+- a5fd07e: Add type library files on release of packages
+
 ## 8.0.0
 
 ### Major Changes
