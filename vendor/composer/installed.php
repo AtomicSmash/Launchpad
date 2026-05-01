@@ -3,7 +3,7 @@
         'name' => 'atomicsmash/launchpad',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '11ed4e8b2bda366b1d248f87fc6fc68f790eb9e8',
+        'reference' => '5cb9788e1e36aed713d71cc0129d3ab48f565e5b',
         'type' => 'wordpress-theme',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'atomicsmash/compiler-helpers' => array(
-            'pretty_version' => 'v0.1.3',
-            'version' => '0.1.3.0',
-            'reference' => '0b70c1e84f8c32bf2d8b7bfb3d73ff96113fe73e',
+            'pretty_version' => 'v1.0.0',
+            'version' => '1.0.0.0',
+            'reference' => 'da32ed2117ecba9b43f1794f9d2838be4a6c3f3e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../atomicsmash/compiler-helpers',
             'aliases' => array(),
@@ -22,7 +22,7 @@
         'atomicsmash/launchpad' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '11ed4e8b2bda366b1d248f87fc6fc68f790eb9e8',
+            'reference' => '5cb9788e1e36aed713d71cc0129d3ab48f565e5b',
             'type' => 'wordpress-theme',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

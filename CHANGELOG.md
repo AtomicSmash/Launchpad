@@ -1,5 +1,11 @@
 # @atomicsmash/launchpad
 
+## 8.1.1
+
+### Patch Changes
+
+- 29afb8b: Deps updates and linting fixes
+
 ## 8.1.0
 
 ### Minor Changes

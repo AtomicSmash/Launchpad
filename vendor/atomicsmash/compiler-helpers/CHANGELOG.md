@@ -1,5 +1,11 @@
 # compiler-helpers
 
+## 1.0.0
+
+### Major Changes
+
+- 347822d: Initial release
+
 ## 0.1.3
 
 ### Patch Changes

@@ -11,7 +11,6 @@ type IconProps = Omit<SVGProps<SVGSVGElement>, "ref"> & {
 const ManifestedIcon = lazy(async () => {
 	const assetManifest = await import(
 		/* webpackIgnore: true */ `/wp-content/themes/launchpad/dist/assets-manifest.json?no_cache=${Date.now()}`,
-		// @ts-expect-error -- This works on the browser and isn't run in the bundler.
 		{ with: { type: "json" } }
 	)
 		.then((module: { default: Record<string, unknown> }) => {
